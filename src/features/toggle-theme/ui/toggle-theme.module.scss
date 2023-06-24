@@ -1,0 +1,12 @@
+.root {
+   margin: -5px;
+   padding: 5px;
+   display: flex;
+   cursor: pointer;
+}
+
+.svg {
+   width: 30px;
+   height: 30px;
+   fill: var(--main-color);
+}
