@@ -1,5 +1,5 @@
 import { apiSlice } from "./base";
-import { transformPainting } from "shared/lib";
+import { transformPaintings, transformPainting } from "shared/lib";
 
 export const paintingsApi = apiSlice.injectEndpoints({
   endpoints: (build) => ({
@@ -10,19 +10,24 @@ export const paintingsApi = apiSlice.injectEndpoints({
         params: query,
       }),
       transformResponse: (response) => {
-        return {
-          data: response.data.map(transformPainting),
-          info: response.info,
-        };
+        const data = response.data.map(transformPaintings);
+        const total = response.info.total;
+
+        return { data, total };
       },
     }),
     getPainting: build.query({
       query: (id) => ({
-        url: `/artworks/${id}?limit=1&has_image=1&fields=id,title,creation_date,images,culture,wall_description,technique,creditline,accession_number`,
+        url: `/artworks/${id}?limit=1&has_image=1&fields=id,title,creators,creation_date,images,culture,wall_description,technique,creditline,accession_number`,
         method: "GET",
       }),
+      transformResponse: (response) => {
+        const data = transformPainting(response.data);
+
+        return { data };
+      },
     }),
   }),
 });
 
-export const { useGetPaintingsQuery } = paintingsApi;
+export const { useGetPaintingsQuery, useGetPaintingQuery } = paintingsApi;

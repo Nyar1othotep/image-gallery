@@ -1,1 +1,1 @@
-export * from "./createMockServer";
+export * from "./create-mock-server";

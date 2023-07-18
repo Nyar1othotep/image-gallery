@@ -1,0 +1,16 @@
+@import "shared/styles/variables";
+
+.input {
+  width: 100%;
+  min-height: 45px;
+  border: 1px solid var(--main-color);
+  border-radius: $xl-border-radius;
+  background: var(--input-background);
+
+  &:focus {
+    border-color: var(--input-focus-border);
+    outline: 0;
+    border-radius: $xl-border-radius;
+    box-shadow: var(--input--focus-box-shadow);
+  }
+}

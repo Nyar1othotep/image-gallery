@@ -8,7 +8,7 @@ import { createReduxStore } from "app/store";
 
 // Providers
 import { Provider as ReduxProvider } from "react-redux";
-import { BrowserRouter as RouterProvider } from "react-router-dom";
+import { HashRouter as RouterProvider } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

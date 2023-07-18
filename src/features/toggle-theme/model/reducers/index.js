@@ -1,1 +1,1 @@
-export * from "./themeReducers";
+export * from "./theme-reducers";

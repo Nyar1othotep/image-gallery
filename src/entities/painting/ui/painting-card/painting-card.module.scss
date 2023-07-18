@@ -1,0 +1,49 @@
+.root {
+  display: flex;
+}
+
+.item {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+  color: var(--main-color);
+
+  & > *:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+  }
+
+  &:hover {
+    background: var(--opacity-gray);
+    & .title,
+    & .create {
+      text-decoration: underline;
+    }
+  }
+}
+
+.img {
+  aspect-ratio: attr(width) / attr(height);
+  padding: 0 0 83.33%;
+  display: block;
+}
+
+.info {
+  padding: 0 15px;
+
+  & > *:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+  }
+}
+
+.title,
+.create {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.create {
+  color: var(--gray);
+}

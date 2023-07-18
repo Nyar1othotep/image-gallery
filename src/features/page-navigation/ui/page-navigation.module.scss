@@ -1,0 +1,69 @@
+$border: 1px solid var(--input-focus-border);
+$box-shadow: var(--input--focus-box-shadow);
+
+.root {
+  padding: 0px 0px 40px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .active a {
+    border: $border;
+    box-shadow: $box-shadow;
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  .disabled {
+    a {
+      border: 1px solid var(--gray);
+
+      &:focus,
+      &:hover {
+        border: 1px solid var(--gray);
+        box-shadow: none;
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+    svg {
+      fill: var(--gray);
+    }
+  }
+
+  li a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--input-background);
+    border: 1px solid var(--main-color);
+    border-radius: 7px;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      border: $border;
+      box-shadow: $box-shadow;
+    }
+
+    &:active {
+      transform: scale(.95);
+    }
+  }
+}
+
+.svg {
+  fill: var(--main-color);
+
+  &_prev {
+    transform: rotate(-180deg);
+  }
+}

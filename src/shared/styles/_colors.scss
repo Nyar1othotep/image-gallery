@@ -1,0 +1,24 @@
+:root[data-theme="light"] {
+  --background: #ffffff;
+  --main-color: #000000;
+
+  // Input
+  --input-background: #ffffff;
+  --input-focus-border: #80bdff;
+  --input--focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+:root[data-theme="dark"] {
+  --background: #000000;
+  --main-color: #ffffff;
+
+  // Input
+  --input-background: #0c0c0c;
+  --input-focus-border: #acacac;
+  --input--focus-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.349);
+}
+
+:root {
+  --gray: #838383;
+  --opacity-gray: rgba(155, 155, 155, 0.2);
+}

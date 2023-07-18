@@ -1,0 +1,26 @@
+@import "shared/styles/variables";
+
+.btn {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-color);
+  border-left: none;
+  border-radius: 0  $xl-border-radius $xl-border-radius 0;
+  background: var(--input-background);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--opacity-gray);
+  }
+  &:active svg {
+    transform: scale(.95);
+  }
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--main-color);
+}

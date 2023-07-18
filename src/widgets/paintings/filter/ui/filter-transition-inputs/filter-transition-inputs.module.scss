@@ -1,0 +1,40 @@
+@import "shared/styles/breakpoints";
+
+.default {
+  margin: 0 0 -65px 0;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+
+  @media (max-width: $m-viewport) {
+    margin: 0 0 -130px 0;
+  }
+
+  @media (max-width: $xs-viewport) {
+    margin: 0 0 -260px 0;
+  }
+}
+
+.enter_active {
+
+}
+
+.enter_done {
+  margin: 0;
+  opacity: 1;
+}
+
+.exit_active {
+  margin: 0 0 -65px 0;
+
+  @media (max-width: $m-viewport) {
+    margin: 0 0 -130px 0;
+  }
+
+  @media (max-width: $xs-viewport) {
+    margin: 0 0 -260px 0;
+  }
+}
+
+.exit_done {
+
+}
