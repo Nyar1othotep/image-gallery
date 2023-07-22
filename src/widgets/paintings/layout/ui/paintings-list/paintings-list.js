@@ -10,7 +10,11 @@ import { messages } from "shared/model";
 // Styles
 import styles from "./paintings-list.module.scss";
 
-export const PaintingsList = ({ paintings, isFetching, isError }) => {
+export const PaintingsList = ({
+  paintings = [],
+  isFetching = false,
+  isError = false,
+}) => {
   if (isFetching) return <Spinner />;
 
   if (isError)

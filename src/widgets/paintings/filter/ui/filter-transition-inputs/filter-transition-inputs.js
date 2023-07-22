@@ -11,7 +11,7 @@ export const FilterTransitionInputs = ({
   inputs = [],
   filterByRef = null,
   isAppear = false,
-  params = {},
+  filter = {},
   onChange = () => {},
 }) => {
   return (
@@ -32,7 +32,7 @@ export const FilterTransitionInputs = ({
           className={styles.default}
           inputs={inputs}
           inputsRef={filterByRef}
-          params={params}
+          filter={filter}
           onChange={onChange}
         />
       )}
@@ -44,4 +44,6 @@ FilterTransitionInputs.propTypes = {
   inputs: PropTypes.array,
   filterByRef: PropTypes.any,
   isAppear: PropTypes.bool,
+  filter: PropTypes.object,
+  onChange: PropTypes.func,
 };

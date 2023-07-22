@@ -14,7 +14,8 @@
 }
 
 .filter_by, .filter_by__active {
-  .title_row {
+  .action_title {
+    padding: 5px 0;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
@@ -26,13 +27,13 @@
   }
 }
 
-.filter_by .title_row svg {
+.filter_by .action_title svg {
   transform: rotate(90deg);
   transition: transform 0.2s ease-in-out;
 }
 
 
-.filter_by__active .title_row svg {
+.filter_by__active .action_title svg {
   transform: rotate(-90deg) !important;
 }
 

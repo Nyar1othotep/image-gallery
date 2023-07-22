@@ -1,0 +1,60 @@
+@import "shared/styles/breakpoints";
+
+.root {
+  display: flex;
+  gap: 37px;
+
+  &>* {
+    flex: 0 1 50%;
+  }
+
+  @media (max-width: $m-viewport) {
+    flex-direction: column;
+
+    &>* {
+      flex: 0 1 100%;
+    }
+  }
+}
+
+.wrapper {
+  text-align: right;
+  &>*:not(:last-child) {
+    margin: 0 0 15px 0;
+  }
+}
+
+.image {
+  display: block;
+  padding: 0 0 79.6%;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 300;
+
+  &>*:not(:last-child) {
+    margin: 0 0 10px 0;
+  }
+
+  &>*:last-child {
+    margin: 40px 0 0 0;
+  }
+
+  @media (max-width: $s-viewport) {
+    h1 {
+      font-size: 26px;
+    }
+
+    &>*:last-child {
+      margin: 25px 0 0 0;
+    }
+  }
+}
+
+.culture {
+  font-weight: 400;
+  text-decoration: underline;
+}

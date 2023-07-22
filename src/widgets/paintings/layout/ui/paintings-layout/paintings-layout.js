@@ -1,8 +1,8 @@
 // Redux & Store
 import { useSelector } from "react-redux";
 
-// Shared
-import { typicodeApi } from "shared/api";
+// Entities
+import { useGetPaintingsQuery } from "entities/painting";
 
 // Component
 import { PaintingsList } from "../paintings-list/paintings-list";
@@ -12,12 +12,9 @@ import { PaintingsNavigation } from "../paintings-navigation/paintings-navigatio
 import styles from "./paintings-layout.module.scss";
 
 export const PaintingsLayout = () => {
-  const query = useSelector((state) => state.query.query);
-  const {
-    data = {},
-    isFetching,
-    isError,
-  } = typicodeApi.useGetPaintingsQuery(query);
+  const filter = useSelector((state) => state.filter.filter);
+
+  const { data = {}, isFetching, isError } = useGetPaintingsQuery(filter);
 
   const { data: paintings = [], total: paintingsTotal = 0 } = data;
 
@@ -33,7 +30,6 @@ export const PaintingsLayout = () => {
         paintingsTotal={paintingsTotal}
         isFetching={isFetching}
         isError={isError}
-        querySkip={query.skip}
       />
     </section>
   );

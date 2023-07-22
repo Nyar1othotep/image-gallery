@@ -1,0 +1,24 @@
+.root {
+
+}
+
+.title {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 80px;
+    width: 100%;
+    border: 1px solid var(--main-color);
+    z-index: 2;
+  }
+}
+
+.list {
+  &>*:not(:last-child) {
+    margin: 0 0 15px 0;
+  }
+}

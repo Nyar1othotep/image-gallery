@@ -1,8 +1,8 @@
 // Pages
-import { Routing } from "pages";
+import { Routing } from "./routing";
 
 // Widgets
-import { Header } from "widgets/header/ui/header";
+import { Header } from "widgets/header";
 
 // Shared
 // import { createMockServer } from "shared/lib/server";

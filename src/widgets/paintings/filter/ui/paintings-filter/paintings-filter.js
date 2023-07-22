@@ -2,8 +2,7 @@ import cn from "classnames";
 import { useRef, useState } from "react";
 
 // Shared
-import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg"; // Shared
-import { useParams } from "shared/lib";
+import { useFilter } from "shared/lib";
 
 // Model
 import { searchBy, filterBy } from "../../model";
@@ -15,26 +14,36 @@ import { FilterTransitionInputs } from "../filter-transition-inputs/filter-trans
 // Styles
 import styles from "./paintings-filter.module.scss";
 
+// Svg
+import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
+
 export const PaintingsFilter = () => {
   const [isFilterBy, setIsFilterBy] = useState(false);
   const filterByRef = useRef(null);
-  const [params, paramsHandler] = useParams();
+  const [filter, filterHandler] = useFilter();
 
   const handleFilterBy = () => {
     setIsFilterBy((isFilterBy) => !isFilterBy);
   };
 
+  const handleKeyUp = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleFilterBy();
+    }
+  };
+
   return (
     <section className={styles.root}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>Search by painting name</h2>
+        <h2>Search by painting name</h2>
         <FilterInputsList
           className={styles.search_by}
           inputs={searchBy}
-          params={params}
-          onChange={paramsHandler}
+          filter={filter}
+          onChange={filterHandler}
         />
       </div>
+
       <div
         className={cn(
           styles.wrapper,
@@ -42,9 +51,10 @@ export const PaintingsFilter = () => {
         )}
       >
         <div
-          data-testid="title-row"
-          className={styles.title_row}
+          className={styles.action_title}
           onClick={handleFilterBy}
+          onKeyUp={handleKeyUp}
+          tabIndex={0}
         >
           <h3>Filter by</h3>
           <IconArrow className={styles.svg} />
@@ -54,8 +64,8 @@ export const PaintingsFilter = () => {
           inputs={filterBy}
           filterByRef={filterByRef}
           isAppear={isFilterBy}
-          params={params}
-          onChange={paramsHandler}
+          filter={filter}
+          onChange={filterHandler}
         />
       </div>
     </section>
