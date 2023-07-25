@@ -19,8 +19,9 @@
 ## Running locally
 
 1. Download project from repository.
-2. Open terminal in code editor.
-3.
+2. Copy `.env.example` to `.env`
+3. Open terminal in code editor.
+4.
 	```
 	npm install
 	npm start
