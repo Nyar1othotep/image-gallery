@@ -4,12 +4,22 @@ import PropTypes from "prop-types";
 // Styles
 import styles from "./action-button.module.scss";
 
-export const ActionButton = ({ className = "", iconSlot, ...other }) => {
+export const ActionButton = ({
+  className = "",
+  contentSlot,
+  iconSlot,
+  ...other
+}) => {
   return (
     <div className={cn(styles.root, className)} role="button" {...other}>
+      {contentSlot && contentSlot}
       {iconSlot && iconSlot}
     </div>
   );
 };
 
-ActionButton.propTypes = { iconSlot: PropTypes.any };
+ActionButton.propTypes = {
+  className: PropTypes.string,
+  contentSlot: PropTypes.any,
+  iconSlot: PropTypes.any,
+};

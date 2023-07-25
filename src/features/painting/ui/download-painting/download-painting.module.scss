@@ -1,8 +1,60 @@
-.root {
-  padding: 5px 0;
-  color: var(--main-color);
+@import "shared/styles/variables";
 
-  &:hover {
-    text-decoration: underline;
+.root {
+  position: relative;
+  display: inline-block;
+  color: var(--main-color);
+  cursor: pointer;
+
+  &:hover .dropdown {
+    display: block;
+  }
+  &:hover .svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.btn {
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: $xl-border-radius;
+}
+
+.svg {
+  fill: var(--main-color);
+  transform: rotate(90deg);
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  display: none;
+  border-radius: $xl-border-radius;
+  border: 1px solid var(--main-color);
+  background-color: var(--background);
+  min-width: 160px;
+  z-index: 1;
+
+  &>*:not(:last-child) {
+    margin: 0 0 5px 0;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    border-radius: $xl-border-radius;
+    color: var(--main-color);
+
+    &:hover {
+      background: var(--opacity-gray);
+    }
+  }
+
+  span {
+    font-size: 13px;
   }
 }

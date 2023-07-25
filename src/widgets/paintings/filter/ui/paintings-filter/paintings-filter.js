@@ -3,6 +3,8 @@ import { useRef, useState } from "react";
 
 // Shared
 import { useFilter } from "shared/lib";
+import { ActionButton } from "shared/ui";
+import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
 // Model
 import { searchBy, filterBy } from "../../model";
@@ -13,9 +15,6 @@ import { FilterTransitionInputs } from "../filter-transition-inputs/filter-trans
 
 // Styles
 import styles from "./paintings-filter.module.scss";
-
-// Svg
-import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
 export const PaintingsFilter = () => {
   const [isFilterBy, setIsFilterBy] = useState(false);
@@ -50,15 +49,14 @@ export const PaintingsFilter = () => {
           isFilterBy ? styles.filter_by__active : styles.filter_by
         )}
       >
-        <div
+        <ActionButton
           className={styles.action_title}
+          contentSlot={<h3>Filter by</h3>}
+          iconSlot={<IconArrow className={styles.svg} />}
           onClick={handleFilterBy}
           onKeyUp={handleKeyUp}
           tabIndex={0}
-        >
-          <h3>Filter by</h3>
-          <IconArrow className={styles.svg} />
-        </div>
+        />
 
         <FilterTransitionInputs
           inputs={filterBy}

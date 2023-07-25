@@ -22,7 +22,7 @@ export const PaintingDetails = ({ painting = {} }) => {
     return <h3 className="center-text">{messages.errorMessage.value}</h3>;
 
   return (
-    <div className={styles.root}>
+    <section className={styles.root}>
       <h1 className={styles.title}>Artwork details</h1>
       <ul className={cn(styles.list, "base-text")}>
         <li>
@@ -47,7 +47,7 @@ export const PaintingDetails = ({ painting = {} }) => {
           <strong>Accession Number:</strong> {accessionNumber}
         </li>
       </ul>
-    </div>
+    </section>
   );
 };
 

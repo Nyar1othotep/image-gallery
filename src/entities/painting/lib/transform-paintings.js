@@ -7,15 +7,9 @@ const getWebImage = (painting) => {
   }
   return null;
 };
-const getPrintImage = (painting) => {
-  if (painting.images.print.url) {
-    return painting.images.print;
-  }
-  return null;
-};
-const getFullImage = (painting) => {
-  if (painting.images.full.url) {
-    return painting.images.full;
+const getImages = (painting) => {
+  if (Object.keys(painting.images).length !== 0) {
+    return painting.images;
   }
   return null;
 };
@@ -43,9 +37,7 @@ export const transformPainting = (painting) => {
   const { id } = painting;
   const title = getTitle(painting);
   const creation_date = getCreationDate(painting);
-  const smallImage = getWebImage(painting);
-  const image = getPrintImage(painting);
-  const fullImage = getFullImage(painting);
+  const images = getImages(painting);
   const creators = getCreators(painting);
   const accessionNumber = getAccessionNumber(painting);
   const creditline = getCreditline(painting);
@@ -57,9 +49,7 @@ export const transformPainting = (painting) => {
     id,
     title,
     creation_date,
-    smallImage,
-    image,
-    fullImage,
+    images,
     creators,
     accessionNumber,
     creditline,

@@ -29,13 +29,13 @@ export const PaintingDetailsPage = () => {
     return <h3 className="center-text">{messages.errorMessage.value}</h3>;
 
   return (
-    <div className={styles.root}>
+    <main className={styles.root}>
       <PaintingFull
         painting={painting}
         actionSlot={<DownloadPainting painting={painting} />}
       />
 
       <PaintingDetails painting={painting} />
-    </div>
+    </main>
   );
 };

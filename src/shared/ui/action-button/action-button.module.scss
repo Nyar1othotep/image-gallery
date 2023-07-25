@@ -11,7 +11,7 @@
   &:hover {
     background: var(--opacity-gray);
   }
-  &:active svg {
+  &:active {
     transform: scale(.95);
   }
 }

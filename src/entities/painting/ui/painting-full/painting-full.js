@@ -10,8 +10,7 @@ import styles from "./painting-full.module.scss";
 
 export const PaintingFull = ({ painting = {}, actionSlot }) => {
   const {
-    smallImage = {},
-    image = {},
+    images = {},
     title = "",
     culture = "",
     creation_date = "",
@@ -22,10 +21,14 @@ export const PaintingFull = ({ painting = {}, actionSlot }) => {
     return <h3 className="center-text">{messages.errorMessage.value}</h3>;
 
   return (
-    <div className={styles.root}>
+    <section className={styles.root}>
       <div className={styles.wrapper}>
         <div className={cn(styles.image, "_ibg")}>
-          <LazyLoadImage image={image} preview={smallImage} alt={title} />
+          <LazyLoadImage
+            image={images.print}
+            preview={images.web}
+            alt={title}
+          />
         </div>
         {actionSlot && actionSlot}
       </div>
@@ -35,7 +38,7 @@ export const PaintingFull = ({ painting = {}, actionSlot }) => {
         <p>{creation_date}</p>
         <p>{wallDescription}</p>
       </div>
-    </div>
+    </section>
   );
 };
 
