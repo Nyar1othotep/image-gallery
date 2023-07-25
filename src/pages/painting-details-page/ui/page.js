@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 // Features
 import { DownloadPainting } from "features/painting";
@@ -30,6 +31,14 @@ export const PaintingDetailsPage = () => {
 
   return (
     <main className={styles.root}>
+      <Helmet>
+        <title>Image Gallery - {painting.title}</title>
+        <meta
+          name="description"
+          content={"Painting description page - " + painting.title}
+        />
+      </Helmet>
+
       <PaintingFull
         painting={painting}
         actionSlot={<DownloadPainting painting={painting} />}
