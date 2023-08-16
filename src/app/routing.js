@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { MainPage } from "pages/main-page";
-import { PaintingDetailsPage } from "pages/painting-details-page";
+import { ArtworkDetailsPage } from "pages/artwork-details-page";
 
 export const Routing = () => {
   return (
@@ -8,8 +8,8 @@ export const Routing = () => {
       <Route exact path="/" element={<MainPage />} />
       <Route
         exact
-        path="/painting/:paintingId"
-        element={<PaintingDetailsPage />}
+        path="/artwork/:artworkId"
+        element={<ArtworkDetailsPage />}
       />
 
       {/* Тут 404 page */}

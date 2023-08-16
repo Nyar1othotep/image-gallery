@@ -1,19 +1,19 @@
 import { Helmet } from "react-helmet";
 
 // Widgets
-import { PaintingsFilter } from "widgets/paintings/filter";
-import { PaintingsLayout } from "widgets/paintings/layout";
+import { ArtworksFilter } from "widgets/artworks/filter";
+import { ArtworksLayout } from "widgets/artworks/layout";
 
 export const MainPage = () => {
   return (
     <main>
       <Helmet>
         <title>Image Gallery</title>
-        <meta name="description" content="Main page with lots of paintings" />
+        <meta name="description" content="Main page with lots of artworks" />
       </Helmet>
 
-      <PaintingsFilter />
-      <PaintingsLayout />
+      <ArtworksFilter />
+      <ArtworksLayout />
     </main>
   );
 };
