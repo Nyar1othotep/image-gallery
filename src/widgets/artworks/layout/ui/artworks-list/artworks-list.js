@@ -2,14 +2,15 @@ import PropTypes from "prop-types";
 
 // Features
 import { ResetFilter } from "features/filter";
+import { ReloadPage } from "features/error";
 
 // Entities
 import { ArtworkCard } from "entities/artwork";
-import { EmptySearch } from "entities/filter";
+import { EmptySearchMessage } from "entities/filter";
+import { ErrorMessage } from "entities/error";
 
 // Shared
 import { Spinner } from "shared/ui";
-import { messages } from "shared/model";
 
 // Styles
 import styles from "./artworks-list.module.scss";
@@ -21,11 +22,10 @@ export const ArtworksList = ({
 }) => {
   if (isFetching) return <Spinner />;
 
-  if (isError)
-    return <h3 className="center-text">{messages.errorMessage.value}</h3>;
+  if (isError) return <ErrorMessage actionSlot={<ReloadPage />} />;
 
   if (artworks.length === 0)
-    return <EmptySearch actionSlot={<ResetFilter />} />;
+    return <EmptySearchMessage actionSlot={<ResetFilter />} />;
 
   return (
     <ul className={styles.root}>

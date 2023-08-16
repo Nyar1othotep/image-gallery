@@ -4,4 +4,3 @@ export * from "./action-button/action-button";
 export * from "./image/image/image";
 export * from "./image/error-image/error-image";
 export * from "./image/lazy-load-image/lazy-load-image";
-export * from "./messages/error/error";

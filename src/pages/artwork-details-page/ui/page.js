@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 
 // Features
 import { DownloadArtwork } from "features/artwork";
+import { ReloadPage } from "features/error";
 
 // Entities
 import {
@@ -10,10 +11,10 @@ import {
   ArtworkFull,
   ArtworkDetails,
 } from "entities/artwork";
+import { ErrorMessage } from "entities/error";
 
 // Shared
 import { Spinner } from "shared/ui";
-import { messages } from "shared/model";
 
 // Styles
 import styles from "./page.module.scss";
@@ -26,8 +27,7 @@ export const ArtworkDetailsPage = () => {
 
   if (isFetching) return <Spinner />;
 
-  if (isError)
-    return <h3 className="center-text">{messages.errorMessage.value}</h3>;
+  if (isError) return <ErrorMessage actionSlot={<ReloadPage />} />;
 
   return (
     <main className={styles.root}>

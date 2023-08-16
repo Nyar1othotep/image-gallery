@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-// Shared
-import { messages } from "shared/model";
+// Features
+import { ReloadPage } from "features/error";
+
+// Entities
+import { ErrorMessage } from "entities/error";
 
 // Styles
 import styles from "./artwork-details.module.scss";
@@ -19,7 +22,7 @@ export const ArtworkDetails = ({ artwork = {} }) => {
   } = artwork;
 
   if (Object.keys(artwork).length === 0)
-    return <h3 className="center-text">{messages.errorMessage.value}</h3>;
+    return <ErrorMessage actionSlot={<ReloadPage />} />;
 
   return (
     <section className={styles.root}>

@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
+// Features
+import { ReloadPage } from "features/error";
+
+// Entities
+import { ErrorMessage } from "entities/error";
+
 // Shared
 import { LazyLoadImage } from "shared/ui";
-import { messages } from "shared/model";
 
 // Styles
 import styles from "./artwork-full.module.scss";
@@ -18,7 +23,7 @@ export const ArtworkFull = ({ artwork = {}, actionSlot }) => {
   } = artwork;
 
   if (Object.keys(artwork).length === 0)
-    return <h3 className="center-text">{messages.errorMessage.value}</h3>;
+    return <ErrorMessage actionSlot={<ReloadPage />} />;
 
   return (
     <section className={styles.root}>
