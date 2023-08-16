@@ -9,6 +9,7 @@ import { messages } from "shared/model";
 
 // Styles
 import styles from "./artworks-list.module.scss";
+import { ResetPagination } from "features/pagination";
 
 export const ArtworksList = ({
   artworks = [],
@@ -24,11 +25,14 @@ export const ArtworksList = ({
     return <h3 className="center-text">{messages.emptySearchMessage.value}</h3>;
 
   return (
-    <ul className={styles.root}>
-      {artworks.map(({ id, ...props }) => {
-        return <ArtworkCard key={id} id={id} {...props} />;
-      })}
-    </ul>
+    <>
+      <ResetPagination />
+      <ul className={styles.root}>
+        {artworks.map(({ id, ...props }) => {
+          return <ArtworkCard key={id} id={id} {...props} />;
+        })}
+      </ul>
+    </>
   );
 };
 

@@ -21,8 +21,9 @@ const filterSlice = createSlice({
           break;
       }
     },
+    resetFilter: () => initialState,
   },
 });
 
-export const { filterCreated } = filterSlice.actions;
+export const { filterCreated, resetFilter } = filterSlice.actions;
 export const reducer = filterSlice.reducer;

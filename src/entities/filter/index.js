@@ -1,2 +1,2 @@
 export * from "./ui/filter-wrapper/filter-wrapper";
-export { filterCreated, reducer as filterReducer } from "./model";
+export { filterCreated, resetFilter, reducer as filterReducer } from "./model";
