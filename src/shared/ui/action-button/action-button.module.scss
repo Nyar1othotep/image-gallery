@@ -3,9 +3,11 @@
 .root {
   width: 100%;
   height: 100%;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: $xl-border-radius;
   cursor: pointer;
 
   &:hover {

@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 
+// Features
+import { ResetFilter } from "features/filter";
+
 // Entities
 import { ArtworkCard } from "entities/artwork";
+import { EmptySearch } from "entities/filter";
 
 // Shared
 import { Spinner } from "shared/ui";
@@ -9,7 +13,6 @@ import { messages } from "shared/model";
 
 // Styles
 import styles from "./artworks-list.module.scss";
-import { ResetPagination } from "features/pagination";
 
 export const ArtworksList = ({
   artworks = [],
@@ -22,17 +25,14 @@ export const ArtworksList = ({
     return <h3 className="center-text">{messages.errorMessage.value}</h3>;
 
   if (artworks.length === 0)
-    return <h3 className="center-text">{messages.emptySearchMessage.value}</h3>;
+    return <EmptySearch actionSlot={<ResetFilter />} />;
 
   return (
-    <>
-      <ResetPagination />
-      <ul className={styles.root}>
-        {artworks.map(({ id, ...props }) => {
-          return <ArtworkCard key={id} id={id} {...props} />;
-        })}
-      </ul>
-    </>
+    <ul className={styles.root}>
+      {artworks.map(({ id, ...props }) => {
+        return <ArtworkCard key={id} id={id} {...props} />;
+      })}
+    </ul>
   );
 };
 

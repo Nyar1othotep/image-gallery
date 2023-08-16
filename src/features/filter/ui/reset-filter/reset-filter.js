@@ -7,17 +7,17 @@ import { useDispatch } from "react-redux";
 import { ActionButton } from "shared/ui";
 
 // Model
-import { resetPagination } from "../../model";
+import { resetFilters } from "../../model";
 
 // Styles
-import styles from "./reset-pagination.module.scss";
+import styles from "./reset-filter.module.scss";
 
-export const ResetPagination = () => {
+export const ResetFilter = () => {
   const dispatch = useDispatch();
 
   const handleReset = useCallback(
     () => {
-      dispatch(resetPagination());
+      dispatch(resetFilters());
     },
     // eslint-disable-next-line
     []
@@ -26,7 +26,7 @@ export const ResetPagination = () => {
   return (
     <ActionButton
       className={styles.root}
-      contentSlot={<h4>Reset</h4>}
+      contentSlot={<h4>Reset search</h4>}
       onClick={handleReset}
     />
   );
