@@ -32,15 +32,11 @@ export const FilterWrapper = ({
     if (filter[identifier]) {
       setValue((value) => filter[identifier]);
     }
-    // eslint-disable-next-line
-  }, [identifier]);
-
-  useEffect(() => {
     if (forceValue) {
       setValue((value) => forceValue);
     }
     // eslint-disable-next-line
-  }, [forceValue]);
+  }, [identifier, forceValue]);
 
   useEffect(() => {
     onChange(value, identifier);
