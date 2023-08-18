@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import cn from "classnames";
 
 // Lib
@@ -19,6 +19,19 @@ export const Image = ({
   onLoad = () => {},
 }) => {
   const [process, setProcess] = useState(image.url ? "loading" : "error");
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const imageElement = imageRef.current;
+
+    if (imageElement) {
+      imageElement.src = image.url;
+
+      return () => {
+        imageElement.src = "";
+      };
+    }
+  }, [image.url]);
 
   const onImageLoad = () => {
     setProcess((process) => "loaded");
@@ -40,8 +53,8 @@ export const Image = ({
     <>
       {imageState}
       <img
+        ref={imageRef}
         className={cn({ [styles.root]: process !== "loaded" }, className)}
-        src={image.url}
         alt={alt}
         width={image.width + "px"}
         height={image.height + "px"}
