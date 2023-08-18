@@ -22,6 +22,7 @@ export const PagePagination = ({
         forcePage={forcePage}
         pageCount={pageCount}
         renderOnZeroPageCount={null}
+        hrefAllControls={true}
         // Previous
         previousLabel={
           <IconArrow

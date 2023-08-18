@@ -33,6 +33,7 @@
   overflow: hidden;
 
   &>* {
+    border-radius: 0;
     background: var(--input-background);
   }
 }

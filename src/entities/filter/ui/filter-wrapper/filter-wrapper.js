@@ -63,7 +63,7 @@ export const FilterWrapper = ({
         />
         {value && <IconReset className={styles.reset} onClick={handelReset} />}
       </div>
-      <div className={styles.slot}>{actionSlot && actionSlot}</div>
+      {actionSlot && <div className={styles.slot}>{actionSlot}</div>}
     </div>
   );
 };

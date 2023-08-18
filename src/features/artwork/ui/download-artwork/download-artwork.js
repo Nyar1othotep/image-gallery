@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
+// Entities
+import { ArtworkLink } from "entities/artwork";
+
 // Shared
 import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
 // Lib
-import { convertObjectToArray, convertToMb } from "../../lib";
+import { convertObjectToArray } from "../../lib";
 
 // Styles
 import styles from "./download-artwork.module.scss";
@@ -25,15 +28,9 @@ export const DownloadArtwork = ({ artwork = {} }) => {
         iconSlot={<IconArrow className={styles.svg} />}
       />
       <ul className={styles.dropdown}>
-        {imagesArray.map((item) => {
-          return (
-            <li key={item.key}>
-              <a href={item.url} download>
-                {item.key} <span>({convertToMb(item.filesize)} Mb)</span>
-              </a>
-            </li>
-          );
-        })}
+        {imagesArray.map((artwork) => (
+          <ArtworkLink key={artwork.key} artwork={artwork} />
+        ))}
       </ul>
     </div>
   );
