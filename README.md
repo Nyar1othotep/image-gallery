@@ -13,8 +13,9 @@
 ## Technologies
 
 1. React
-2. SCSS
-3. FSD - Feature-Sliced Design
+2. Redux Toolkit + RTK Query
+3. SCSS modules
+4. FSD - Feature-Sliced Design
 
 ## Running locally
 
