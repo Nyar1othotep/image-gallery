@@ -44,6 +44,12 @@ export const FilterWrapper = ({
     }
   };
 
+  const handleKeyUpReset = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handelReset();
+    }
+  };
+
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
@@ -60,6 +66,8 @@ export const FilterWrapper = ({
           <IconReset
             className={styles.reset}
             onClick={handelReset}
+            onKeyUp={handleKeyUpReset}
+            tabIndex={0}
             aria-label="Clear the query"
           />
         )}

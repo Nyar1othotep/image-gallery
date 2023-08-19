@@ -37,6 +37,12 @@ export const GoToPage = ({ pageCount = 0 }) => {
     [value, perPage]
   );
 
+  const handleKeyUp = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleGoToPage();
+    }
+  };
+
   return (
     <div className={styles.root}>
       <FilterWrapper
@@ -46,17 +52,21 @@ export const GoToPage = ({ pageCount = 0 }) => {
         inputType="number"
         onChange={handleChange}
         onKeyUp={handleGoToPage}
-        actionSlot={<ActionSlot onClick={handleGoToPage} />}
+        actionSlot={
+          <ActionSlot onClick={handleGoToPage} onKeyUp={handleKeyUp} />
+        }
       />
     </div>
   );
 };
 
-const ActionSlot = ({ onClick = () => {} }) => {
+const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
   return (
     <ActionButton
       onClick={onClick}
+      onKeyUp={onKeyUp}
       iconSlot={<IconGoToPage className={styles.svg} />}
+      tabIndex={0}
       aria-label="Go to page"
     />
   );

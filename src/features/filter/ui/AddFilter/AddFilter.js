@@ -25,22 +25,32 @@ export const AddFilter = ({
     // eslint-disable-next-line
   }, [filter]);
 
+  const handleKeyUp = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleAddFilter();
+    }
+  };
+
   return (
     <FilterWrapper
       identifier={identifier}
       onChange={onChange}
       onKeyUp={handleAddFilter}
-      actionSlot={<ActionSlot onClick={handleAddFilter} />}
+      actionSlot={
+        <ActionSlot onClick={handleAddFilter} onKeyUp={handleKeyUp} />
+      }
       {...props}
     />
   );
 };
 
-const ActionSlot = ({ onClick = () => {} }) => {
+const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
   return (
     <ActionButton
       onClick={onClick}
+      onKeyUp={onKeyUp}
       iconSlot={<IconSearch className={styles.svg} />}
+      tabIndex={0}
       aria-label="Search by query"
     />
   );
