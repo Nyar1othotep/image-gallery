@@ -17,7 +17,7 @@ import storage from "redux-persist/lib/storage";
 import { rootReducers } from "./root-reducers";
 
 // Shared
-import { typicodeApi } from "shared/api";
+import { baseApi } from "shared/api";
 
 const persistConfig = {
   key: "root",
@@ -35,7 +35,7 @@ export const createReduxStore = () => {
         serializableCheck: {
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
-      }).concat(typicodeApi.apiSlice.middleware),
+      }).concat(baseApi.middleware),
     devTools: process.env.NODE_ENV !== "production",
   });
 

@@ -1,7 +1,7 @@
-import { typicodeApi } from "shared/api";
+import { baseApi } from "shared/api";
 import { transformArtwork, transformArtworks } from "../lib";
 
-export const artworkApi = typicodeApi.apiSlice.injectEndpoints({
+export const artworkApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getArtworks: build.query({
       query: (config) => {
