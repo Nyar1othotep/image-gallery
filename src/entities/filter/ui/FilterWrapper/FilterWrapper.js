@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 // Shared
-import { useInput } from "shared/lib";
 import { Input } from "shared/ui";
 
+import { useInput } from "../../lib/useInput";
 import styles from "./FilterWrapper.module.scss";
 import { ReactComponent as IconReset } from "./assets/icon-close.svg";
 

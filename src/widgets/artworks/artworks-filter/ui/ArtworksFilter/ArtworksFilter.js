@@ -1,8 +1,10 @@
 import cn from "classnames";
 import { useRef, useState } from "react";
 
+// Entities
+import { useFilter } from "entities/filter";
+
 // Shared
-import { useFilter } from "shared/lib";
 import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
