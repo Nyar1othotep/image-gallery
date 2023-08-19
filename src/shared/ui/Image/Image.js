@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import cn from "classnames";
 
-import { setImageContent } from "../../lib";
+import { setImageContent, useImageHandler } from "../../lib";
 import { ErrorImage } from "../ErrorImage/ErrorImage";
 import styles from "./Image.module.scss";
 
@@ -14,19 +14,7 @@ export const Image = ({
   onLoad = () => {},
 }) => {
   const [process, setProcess] = useState(image.url ? "loading" : "error");
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    const imageElement = imageRef.current;
-
-    if (imageElement) {
-      imageElement.src = image.url;
-
-      return () => {
-        imageElement.src = "";
-      };
-    }
-  }, [image.url]);
+  const [imageRef] = useImageHandler(image.url);
 
   const onImageLoad = () => {
     setProcess((process) => "loaded");
