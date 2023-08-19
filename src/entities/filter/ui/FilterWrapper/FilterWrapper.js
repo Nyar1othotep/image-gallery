@@ -56,7 +56,13 @@ export const FilterWrapper = ({
           onBlur={handleBlur}
           onKeyUp={handleKeyUp}
         />
-        {value && <IconReset className={styles.reset} onClick={handelReset} />}
+        {value && (
+          <IconReset
+            className={styles.reset}
+            onClick={handelReset}
+            aria-label="Clear the query"
+          />
+        )}
       </div>
       {actionSlot && <div className={styles.slot}>{actionSlot}</div>}
     </div>

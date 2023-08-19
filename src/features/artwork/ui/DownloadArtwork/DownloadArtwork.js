@@ -23,6 +23,7 @@ export const DownloadArtwork = ({ artwork = {} }) => {
         className={styles.btn}
         contentSlot={<h4>Download</h4>}
         iconSlot={<IconArrow className={styles.svg} />}
+        aria-label="Show list of artworks for download"
       />
       <ul className={styles.dropdown}>
         {imagesArray.map((artwork) => (

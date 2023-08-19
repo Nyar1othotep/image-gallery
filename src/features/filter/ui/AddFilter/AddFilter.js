@@ -41,6 +41,7 @@ const ActionSlot = ({ onClick = () => {} }) => {
     <ActionButton
       onClick={onClick}
       iconSlot={<IconSearch className={styles.svg} />}
+      aria-label="Search by query"
     />
   );
 };

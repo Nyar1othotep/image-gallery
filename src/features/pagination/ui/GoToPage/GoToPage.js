@@ -57,6 +57,7 @@ const ActionSlot = ({ onClick = () => {} }) => {
     <ActionButton
       onClick={onClick}
       iconSlot={<IconGoToPage className={styles.svg} />}
+      aria-label="Go to page"
     />
   );
 };

@@ -53,6 +53,7 @@ export const ArtworksFilter = () => {
           onClick={handleFilterBy}
           onKeyUp={handleKeyUp}
           tabIndex={0}
+          aria-label="Show more filters"
         />
 
         <FilterTransitionInputs

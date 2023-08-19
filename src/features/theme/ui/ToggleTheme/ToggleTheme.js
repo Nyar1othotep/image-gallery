@@ -32,8 +32,9 @@ export const ToggleTheme = ({ className = "" }) => {
       className={cn(styles.root, className)}
       onClick={handleTheme}
       onKeyUp={handleKeyUp}
-      tabIndex={0}
       iconSlot={<IconTheme className={styles.svg} />}
+      tabIndex={0}
+      aria-label="Switch between dark and light mode"
     />
   );
 };
