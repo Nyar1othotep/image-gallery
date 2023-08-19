@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { MainPage } from "pages/main-page";
-import { ArtworkDetailsPage } from "pages/artwork-details-page";
+
+// Pages
+import { MainPage } from "pages/main";
+import { ArtworkDetailsPage } from "pages/artwork";
 
 export const Routing = () => {
   return (

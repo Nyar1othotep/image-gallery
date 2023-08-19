@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 // Shared
 import { Image } from "shared/ui";
 
-// Lib
 import { useImageObserver } from "../../lib/useImageObserver";
-
-// Styles
 import styles from "./ArtworkCard.module.scss";
 
 export const ArtworkCard = ({

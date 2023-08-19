@@ -1,1 +1,1 @@
-export * from "./store";
+export { store, persistedStore } from "./store";

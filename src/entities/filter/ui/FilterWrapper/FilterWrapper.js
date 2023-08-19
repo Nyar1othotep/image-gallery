@@ -1,17 +1,12 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-
-// Redux & Store
 import { useSelector } from "react-redux";
 
 // Shared
-import { useInput } from "shared/lib";
 import { Input } from "shared/ui";
 
-// Styles
+import { useInput } from "../../lib/useInput";
 import styles from "./FilterWrapper.module.scss";
-
-// Svg
 import { ReactComponent as IconReset } from "./assets/icon-close.svg";
 
 export const FilterWrapper = ({
@@ -49,6 +44,12 @@ export const FilterWrapper = ({
     }
   };
 
+  const handleKeyUpReset = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handelReset();
+    }
+  };
+
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
@@ -61,7 +62,15 @@ export const FilterWrapper = ({
           onBlur={handleBlur}
           onKeyUp={handleKeyUp}
         />
-        {value && <IconReset className={styles.reset} onClick={handelReset} />}
+        {value && (
+          <IconReset
+            className={styles.reset}
+            onClick={handelReset}
+            onKeyUp={handleKeyUpReset}
+            tabIndex={0}
+            aria-label="Clear the query"
+          />
+        )}
       </div>
       {actionSlot && <div className={styles.slot}>{actionSlot}</div>}
     </div>

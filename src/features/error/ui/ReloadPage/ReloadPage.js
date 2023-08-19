@@ -1,7 +1,6 @@
 // Shared
 import { ActionButton } from "shared/ui";
 
-// Styles
 import styles from "./ReloadPage.module.scss";
 
 export const ReloadPage = () => {

@@ -1,10 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-// Lib
 import { useBreakpoint } from "../../lib";
-
-// Component
 import { Image } from "../Image/Image";
 import { ErrorImage } from "../ErrorImage/ErrorImage";
 

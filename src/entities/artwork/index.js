@@ -3,3 +3,4 @@ export { ArtworkDetails } from "./ui/ArtworkDetails/ArtworkDetails";
 export { ArtworkFull } from "./ui/ArtworkFull/ArtworkFull";
 export { ArtworkLink } from "./ui/ArtworkLink/ArtworkLink";
 export { useGetArtworksQuery, useGetArtworkQuery } from "./api/artworkApi";
+export { usePageCount } from "./lib/usePageCount";

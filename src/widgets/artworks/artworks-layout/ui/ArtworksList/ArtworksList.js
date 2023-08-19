@@ -6,13 +6,12 @@ import { ReloadPage } from "features/error";
 
 // Entities
 import { ArtworkCard } from "entities/artwork";
-import { EmptySearchMessage } from "entities/filter";
+import { SearchMessage } from "entities/filter";
 import { ErrorMessage } from "entities/error";
 
 // Shared
 import { Spinner } from "shared/ui";
 
-// Styles
 import styles from "./ArtworksList.module.scss";
 
 export const ArtworksList = ({
@@ -25,7 +24,7 @@ export const ArtworksList = ({
   if (isError) return <ErrorMessage actionSlot={<ReloadPage />} />;
 
   if (artworks.length === 0)
-    return <EmptySearchMessage actionSlot={<ResetFilter />} />;
+    return <SearchMessage actionSlot={<ResetFilter />} />;
 
   return (
     <ul className={styles.root}>

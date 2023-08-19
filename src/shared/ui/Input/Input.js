@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-// Styles
 import styles from "./Input.module.scss";
 
 export const Input = ({ className = "", ...others }) => {

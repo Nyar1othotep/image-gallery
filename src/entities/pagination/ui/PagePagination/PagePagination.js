@@ -5,7 +5,6 @@ import ReactPaginate from "react-paginate";
 // Shared
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
-// Styles
 import styles from "./PagePagination.module.scss";
 
 export const PagePagination = ({

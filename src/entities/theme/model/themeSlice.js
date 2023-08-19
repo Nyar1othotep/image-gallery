@@ -1,7 +1,5 @@
-// Redux
 import { createSlice } from "@reduxjs/toolkit";
 
-// Config
 import { themes } from "../config/themes";
 
 const initialState = {

@@ -1,7 +1,4 @@
-// Component
 import { Image } from "../Image/Image";
-
-// Assets
 import imgNotFound from "../../assets/not-found.jpg";
 
 export const ErrorImage = () => {

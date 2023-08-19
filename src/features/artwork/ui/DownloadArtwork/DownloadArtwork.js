@@ -8,10 +8,7 @@ import { ArtworkLink } from "entities/artwork";
 import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
-// Lib
 import { convertToArray } from "../../lib/convertToArray";
-
-// Styles
 import styles from "./DownloadArtwork.module.scss";
 
 export const DownloadArtwork = ({ artwork = {} }) => {
@@ -26,6 +23,7 @@ export const DownloadArtwork = ({ artwork = {} }) => {
         className={styles.btn}
         contentSlot={<h4>Download</h4>}
         iconSlot={<IconArrow className={styles.svg} />}
+        aria-label="Show list of artworks for download"
       />
       <ul className={styles.dropdown}>
         {imagesArray.map((artwork) => (

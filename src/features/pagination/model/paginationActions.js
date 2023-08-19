@@ -1,4 +1,3 @@
-// Redux & Store
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // Entities

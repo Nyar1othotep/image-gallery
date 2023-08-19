@@ -10,7 +10,6 @@ import { ErrorMessage } from "entities/error";
 // Shared
 import { LazyLoadImage } from "shared/ui";
 
-// Styles
 import styles from "./ArtworkFull.module.scss";
 
 export const ArtworkFull = ({ artwork = {}, actionSlot }) => {

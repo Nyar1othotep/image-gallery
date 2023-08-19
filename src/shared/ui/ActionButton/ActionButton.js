@@ -1,7 +1,6 @@
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-// Styles
 import styles from "./ActionButton.module.scss";
 
 export const ActionButton = ({

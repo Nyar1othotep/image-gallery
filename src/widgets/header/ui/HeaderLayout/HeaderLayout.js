@@ -3,16 +3,13 @@ import { Link } from "react-router-dom";
 // Features
 import { ToggleTheme } from "features/theme";
 
-// Svg
 import { ReactComponent as IconLogo } from "./assets/logo.svg";
-
-// Styles
 import styles from "./HeaderLayout.module.scss";
 
 export const HeaderLayout = () => {
   return (
     <header className={styles.root}>
-      <Link to="/">
+      <Link to="/" aria-label="Image gallery logo">
         <IconLogo className={styles.logo} />
       </Link>
       <ToggleTheme />

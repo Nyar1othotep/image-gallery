@@ -1,19 +1,16 @@
 import cn from "classnames";
 import { useRef, useState } from "react";
 
+// Entities
+import { useFilter } from "entities/filter";
+
 // Shared
-import { useFilter } from "shared/lib";
 import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
-// Model
 import { searchBy, filterBy } from "../../model/filters";
-
-// Component
 import { FilterInputsList } from "../FilterInputsList/FilterInputsList";
 import { FilterTransitionInputs } from "../FilterTransitionInputs/FilterTransitionInputs";
-
-// Styles
 import styles from "./ArtworksFilter.module.scss";
 
 export const ArtworksFilter = () => {
@@ -56,6 +53,7 @@ export const ArtworksFilter = () => {
           onClick={handleFilterBy}
           onKeyUp={handleKeyUp}
           tabIndex={0}
+          aria-label="Show more filters"
         />
 
         <FilterTransitionInputs

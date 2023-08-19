@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { useCallback } from "react";
-
-// Redux & Store
 import { useDispatch } from "react-redux";
 
 // Entities
@@ -10,13 +8,8 @@ import { FilterWrapper } from "entities/filter";
 // Shared
 import { ActionButton } from "shared/ui";
 
-// Model
 import { addFilter } from "../../model/filterActions";
-
-// Styles
 import styles from "./AddFilter.module.scss";
-
-// Svg
 import { ReactComponent as IconSearch } from "./assets/search.svg";
 
 export const AddFilter = ({
@@ -32,22 +25,33 @@ export const AddFilter = ({
     // eslint-disable-next-line
   }, [filter]);
 
+  const handleKeyUp = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handleAddFilter();
+    }
+  };
+
   return (
     <FilterWrapper
       identifier={identifier}
       onChange={onChange}
       onKeyUp={handleAddFilter}
-      actionSlot={<ActionSlot onClick={handleAddFilter} />}
+      actionSlot={
+        <ActionSlot onClick={handleAddFilter} onKeyUp={handleKeyUp} />
+      }
       {...props}
     />
   );
 };
 
-const ActionSlot = ({ onClick = () => {} }) => {
+const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
   return (
     <ActionButton
       onClick={onClick}
+      onKeyUp={onKeyUp}
       iconSlot={<IconSearch className={styles.svg} />}
+      tabIndex={0}
+      aria-label="Search by query"
     />
   );
 };

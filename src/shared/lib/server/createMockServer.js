@@ -1,10 +1,7 @@
 import { createServer } from "miragejs";
 
-// Mocks
 import paintings from "./__mocks__/paintings.json";
-
-// API url
-import { API_URL } from "shared/config";
+import { API_URL } from "../../config";
 
 export const createMockServer = () => {
   return createServer({

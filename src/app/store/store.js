@@ -1,4 +1,3 @@
-// Redux & Store
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import {
@@ -13,11 +12,10 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-// Store
-import { rootReducers } from "./root-reducers";
-
 // Shared
 import { baseApi } from "shared/api";
+
+import { rootReducers } from "./root-reducers";
 
 const persistConfig = {
   key: "root",

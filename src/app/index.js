@@ -5,9 +5,8 @@ import { Routing } from "./routing";
 import { HeaderLayout } from "widgets/header";
 
 // Shared
-// import { createMockServer } from "shared/lib/server";
+// import { createMockServer } from "shared/lib";
 
-// Styles
 import "./index.scss";
 
 // if (process.env.NODE_ENV === "development") {

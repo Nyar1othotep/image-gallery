@@ -1,13 +1,11 @@
 import PropTypes from "prop-types";
-
-// Redux & Store
 import { useSelector } from "react-redux";
 
 // Features
 import { SelectPage, GoToPage } from "features/pagination";
 
-// Shared
-import { usePageCount } from "shared/lib";
+// Entities
+import { usePageCount } from "entities/artwork";
 
 export const ArtworksNavigation = ({
   artworksTotal = 0,
