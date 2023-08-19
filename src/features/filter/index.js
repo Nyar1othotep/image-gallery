@@ -1,2 +1,2 @@
-export * from "./ui/add-filter/add-filter";
-export * from "./ui/reset-filter/reset-filter";
+export { AddFilter } from "./ui/AddFilter/AddFilter";
+export { ResetFilter } from "./ui/ResetFilter/ResetFilter";

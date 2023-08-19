@@ -1,2 +1,2 @@
-export * from "./ui/select-page/select-page";
-export * from "./ui/go-to-page/go-to-page";
+export { SelectPage } from "./ui/SelectPage/SelectPage";
+export { GoToPage } from "./ui/GoToPage/GoToPage";

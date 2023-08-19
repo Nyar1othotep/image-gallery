@@ -1,1 +1,1 @@
-export * from "./ui/download-artwork/download-artwork";
+export { DownloadArtwork } from "./ui/DownloadArtwork/DownloadArtwork";

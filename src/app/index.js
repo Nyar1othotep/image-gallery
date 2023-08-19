@@ -2,7 +2,7 @@
 import { Routing } from "./routing";
 
 // Widgets
-import { Header } from "widgets/header";
+import { HeaderLayout } from "widgets/header";
 
 // Shared
 // import { createMockServer } from "shared/lib/server";
@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="_container">
-        <Header />
+        <HeaderLayout />
         <Routing />
       </div>
     </div>
