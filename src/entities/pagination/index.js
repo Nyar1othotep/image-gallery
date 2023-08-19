@@ -1,7 +1,7 @@
-export * from "./ui/PagePagination/PagePagination";
+export { PagePagination } from "./ui/PagePagination/PagePagination";
 export {
   setPage,
   setPerPage,
   resetPage,
   reducer as pageReducer,
-} from "./model";
+} from "./model/pageSlice";

@@ -1,1 +1,1 @@
-export * from "./ui/ErrorMessage/ErrorMessage";
+export { ErrorMessage } from "./ui/ErrorMessage/ErrorMessage";

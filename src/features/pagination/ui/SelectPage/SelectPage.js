@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { PagePagination } from "entities/pagination";
 
 // Model
-import { addSkipAndPage } from "../../model";
+import { addSkipAndPage } from "../../model/paginationActions";
 
 export const SelectPage = ({ pageCount = 0 }) => {
   const dispatch = useDispatch();

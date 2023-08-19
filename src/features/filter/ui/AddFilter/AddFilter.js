@@ -11,7 +11,7 @@ import { FilterWrapper } from "entities/filter";
 import { ActionButton } from "shared/ui";
 
 // Model
-import { addFilter } from "../../model";
+import { addFilter } from "../../model/filterActions";
 
 // Styles
 import styles from "./AddFilter.module.scss";

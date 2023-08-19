@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { ActionButton } from "shared/ui";
 
 // Model
-import { resetFilters } from "../../model";
+import { resetFilters } from "../../model/filterActions";
 
 // Styles
 import styles from "./ResetFilter.module.scss";

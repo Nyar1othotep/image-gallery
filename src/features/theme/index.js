@@ -1,1 +1,1 @@
-export * from "./ui/ToggleTheme/ToggleTheme";
+export { ToggleTheme } from "./ui/ToggleTheme/ToggleTheme";

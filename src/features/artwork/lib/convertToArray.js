@@ -1,4 +1,4 @@
-export const convertObjectToArray = (obj) => {
+export const convertToArray = (obj) => {
   return Object.keys(obj).map((key) => {
     return {
       key,

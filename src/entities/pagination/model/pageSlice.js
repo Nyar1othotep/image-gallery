@@ -5,7 +5,7 @@ const initialState = {
   perPage: 20,
 };
 
-const page = createSlice({
+const pageSlice = createSlice({
   name: "page",
   initialState,
   reducers: {
@@ -19,5 +19,5 @@ const page = createSlice({
   },
 });
 
-export const { setPage, setPerPage, resetPage } = page.actions;
-export const reducer = page.reducer;
+export const { setPage, setPerPage, resetPage } = pageSlice.actions;
+export const reducer = pageSlice.reducer;

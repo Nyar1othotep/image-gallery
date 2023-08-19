@@ -11,7 +11,7 @@ import { FilterWrapper } from "entities/filter";
 import { ActionButton } from "shared/ui";
 
 // Model
-import { addSkipAndPage } from "../../model";
+import { addSkipAndPage } from "../../model/paginationActions";
 
 // Styles
 import styles from "./GoToPage.module.scss";

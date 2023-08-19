@@ -1,1 +1,1 @@
-export * from "./ui/HeaderLayout/HeaderLayout";
+export { HeaderLayout } from "./ui/HeaderLayout/HeaderLayout";

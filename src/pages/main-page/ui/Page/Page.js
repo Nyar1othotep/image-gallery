@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet";
 
 // Widgets
-import { ArtworksFilter } from "widgets/artworks/filter";
-import { ArtworksLayout } from "widgets/artworks/layout";
+import { ArtworksFilter } from "widgets/artworks/artworks-filter";
+import { ArtworksLayout } from "widgets/artworks/artworks-layout";
 
 export const MainPage = () => {
   return (

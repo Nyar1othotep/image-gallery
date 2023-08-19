@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 // Lib
-import { convertToMb } from "../../lib";
+import { convertToMb } from "../../lib/convertToMb";
 
 export const ArtworkLink = ({ artwork = {} }) => {
   const { key = "", filename = "", url = "", filesize = "" } = artwork;

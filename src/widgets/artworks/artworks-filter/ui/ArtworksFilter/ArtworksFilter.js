@@ -7,7 +7,7 @@ import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
 // Model
-import { searchBy, filterBy } from "../../model";
+import { searchBy, filterBy } from "../../model/filters";
 
 // Component
 import { FilterInputsList } from "../FilterInputsList/FilterInputsList";

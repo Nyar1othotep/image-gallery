@@ -6,7 +6,7 @@ import { filterCreated, resetFilter } from "entities/filter";
 import { resetPage } from "entities/pagination";
 
 export const addFilter = createAsyncThunk(
-  "filter/addFilter",
+  "artworks-filter/addFilter",
   async (filter, { dispatch }) => {
     dispatch(filterCreated({ case: "add", filter }));
     dispatch(resetPage());

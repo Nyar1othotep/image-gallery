@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // Config
-import { themes } from "../config";
+import { themes } from "../config/themes";
 
 const initialState = {
   theme: window.matchMedia(`(prefers-color-scheme: ${themes.light})`)
@@ -10,7 +10,7 @@ const initialState = {
     : themes.dark,
 };
 
-const themeModel = createSlice({
+const themeSlice = createSlice({
   name: "theme",
   initialState,
   reducers: {
@@ -20,5 +20,5 @@ const themeModel = createSlice({
   },
 });
 
-export const { changeTheme } = themeModel.actions;
-export const reducer = themeModel.reducer;
+export const { changeTheme } = themeSlice.actions;
+export const reducer = themeSlice.reducer;

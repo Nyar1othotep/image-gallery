@@ -1,5 +1,5 @@
 import { baseApi } from "shared/api";
-import { transformArtwork, transformArtworks } from "../lib";
+import { transformArtwork, transformArtworks } from "../lib/transformArtworks";
 
 export const artworkApi = baseApi.injectEndpoints({
   endpoints: (build) => ({

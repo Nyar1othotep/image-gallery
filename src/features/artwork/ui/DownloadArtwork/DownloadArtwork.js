@@ -9,13 +9,13 @@ import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
 // Lib
-import { convertObjectToArray } from "../../lib";
+import { convertToArray } from "../../lib/convertToArray";
 
 // Styles
 import styles from "./DownloadArtwork.module.scss";
 
 export const DownloadArtwork = ({ artwork = {} }) => {
-  const imagesArray = convertObjectToArray(artwork.images);
+  const imagesArray = convertToArray(artwork.images);
 
   if (Object.keys(artwork).length === 0 && imagesArray.length === 0)
     return null;

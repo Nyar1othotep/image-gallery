@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 // Model
-import { useTheme } from "../model";
+import { useTheme } from "../model/themeSelectors";
 
 export const ThemeProvider = ({ children }) => {
   const theme = useTheme();
