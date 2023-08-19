@@ -7,7 +7,6 @@ import { ReloadPage } from "features/error";
 // Entities
 import { ErrorMessage } from "entities/error";
 
-// Styles
 import styles from "./ArtworkDetails.module.scss";
 
 export const ArtworkDetails = ({ artwork = {} }) => {

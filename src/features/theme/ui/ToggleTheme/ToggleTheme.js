@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
-
-// Redux & Store
+import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 
 // Entities
@@ -10,12 +9,8 @@ import { changeTheme, useTheme } from "entities/theme";
 // Shared
 import { ActionButton } from "shared/ui";
 
-// Styles
 import styles from "./ToggleTheme.module.scss";
-
-// Svg
 import { ReactComponent as IconTheme } from "./assets/icon-theme.svg";
-import { useCallback } from "react";
 
 export const ToggleTheme = ({ className = "" }) => {
   const dispatch = useDispatch();

@@ -16,7 +16,6 @@ import { ErrorMessage } from "entities/error";
 // Shared
 import { Spinner } from "shared/ui";
 
-// Styles
 import styles from "./Page.module.scss";
 
 export const ArtworkDetailsPage = () => {

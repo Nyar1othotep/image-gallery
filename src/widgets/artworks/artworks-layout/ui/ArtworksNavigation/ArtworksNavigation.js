@@ -1,6 +1,4 @@
 import PropTypes from "prop-types";
-
-// Redux & Store
 import { useSelector } from "react-redux";
 
 // Features

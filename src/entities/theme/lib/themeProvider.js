@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-// Model
 import { useTheme } from "../model/themeSelectors";
 
 export const ThemeProvider = ({ children }) => {

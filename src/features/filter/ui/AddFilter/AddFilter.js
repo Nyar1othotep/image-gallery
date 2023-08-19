@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { useCallback } from "react";
-
-// Redux & Store
 import { useDispatch } from "react-redux";
 
 // Entities
@@ -10,13 +8,8 @@ import { FilterWrapper } from "entities/filter";
 // Shared
 import { ActionButton } from "shared/ui";
 
-// Model
 import { addFilter } from "../../model/filterActions";
-
-// Styles
 import styles from "./AddFilter.module.scss";
-
-// Svg
 import { ReactComponent as IconSearch } from "./assets/search.svg";
 
 export const AddFilter = ({

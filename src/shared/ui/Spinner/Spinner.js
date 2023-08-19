@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-// Styles
 import styles from "./Spinner.module.scss";
 
 export const Spinner = ({ className = "", width = 50, height = 50 }) => {
   return (
-    <div data-testid="spinner" className={cn(styles.root, className)}>
+    <div className={cn(styles.root, className)}>
       <div
         className={styles.spinner}
         style={{

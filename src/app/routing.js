@@ -1,4 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+
+// Pages
 import { MainPage } from "pages/main";
 import { ArtworkDetailsPage } from "pages/artwork";
 

@@ -1,7 +1,6 @@
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-// Styles
 import styles from "./ErrorMessage.module.scss";
 
 export const ErrorMessage = ({ className = "", message = "", actionSlot }) => {

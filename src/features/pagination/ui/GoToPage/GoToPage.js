@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { useState, useCallback } from "react";
-
-// Redux & Store
 import { useDispatch, useSelector } from "react-redux";
 
 // Entities
@@ -10,13 +8,8 @@ import { FilterWrapper } from "entities/filter";
 // Shared
 import { ActionButton } from "shared/ui";
 
-// Model
 import { addSkipAndPage } from "../../model/paginationActions";
-
-// Styles
 import styles from "./GoToPage.module.scss";
-
-// Svg
 import { ReactComponent as IconGoToPage } from "./assets/arrow.svg";
 
 export const GoToPage = ({ pageCount = 0 }) => {

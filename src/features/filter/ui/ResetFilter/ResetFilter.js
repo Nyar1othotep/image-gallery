@@ -1,15 +1,10 @@
 import { useCallback } from "react";
-
-// Redux & Store
 import { useDispatch } from "react-redux";
 
 // Shared
 import { ActionButton } from "shared/ui";
 
-// Model
 import { resetFilters } from "../../model/filterActions";
-
-// Styles
 import styles from "./ResetFilter.module.scss";
 
 export const ResetFilter = () => {

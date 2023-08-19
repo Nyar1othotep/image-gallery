@@ -1,14 +1,10 @@
-// Redux & Store
 import { useSelector } from "react-redux";
 
 // Entities
 import { useGetArtworksQuery } from "entities/artwork";
 
-// Component
 import { ArtworksList } from "../ArtworksList/ArtworksList";
 import { ArtworksNavigation } from "../ArtworksNavigation/ArtworksNavigation";
-
-// Styles
 import styles from "./ArtworksLayout.module.scss";
 
 export const ArtworksLayout = () => {

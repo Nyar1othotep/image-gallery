@@ -2,13 +2,8 @@ import PropTypes from "prop-types";
 import { useEffect, useMemo, useRef, useState } from "react";
 import cn from "classnames";
 
-// Lib
 import { setImageContent } from "../../lib";
-
-// Component
 import { ErrorImage } from "../ErrorImage/ErrorImage";
-
-// Styles
 import styles from "./Image.module.scss";
 
 export const Image = ({

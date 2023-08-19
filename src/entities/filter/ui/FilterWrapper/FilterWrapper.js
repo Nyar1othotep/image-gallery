@@ -1,17 +1,12 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
-
-// Redux & Store
 import { useSelector } from "react-redux";
 
 // Shared
 import { useInput } from "shared/lib";
 import { Input } from "shared/ui";
 
-// Styles
 import styles from "./FilterWrapper.module.scss";
-
-// Svg
 import { ReactComponent as IconReset } from "./assets/icon-close.svg";
 
 export const FilterWrapper = ({

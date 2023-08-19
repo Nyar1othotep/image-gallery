@@ -8,10 +8,7 @@ import { ArtworkLink } from "entities/artwork";
 import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
-// Lib
 import { convertToArray } from "../../lib/convertToArray";
-
-// Styles
 import styles from "./DownloadArtwork.module.scss";
 
 export const DownloadArtwork = ({ artwork = {} }) => {

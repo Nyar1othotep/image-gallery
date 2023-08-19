@@ -1,10 +1,7 @@
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
 
-// Component
 import { FilterInputsList } from "../FilterInputsList/FilterInputsList";
-
-// Styles
 import styles from "./FilterTransitionInputs.module.scss";
 
 export const FilterTransitionInputs = ({

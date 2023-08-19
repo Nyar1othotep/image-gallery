@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 // Features
 import { AddFilter } from "features/filter";
 
-// Styles
 import styles from "./FilterInputsList.module.scss";
 
 export const FilterInputsList = ({
