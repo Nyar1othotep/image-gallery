@@ -1,3 +1,3 @@
-export * from "./ui/filter-wrapper/filter-wrapper";
-export * from "./ui/empty-search-message/empty-search-message";
+export * from "./ui/FilterWrapper/FilterWrapper";
+export * from "./ui/EmptySearchMessage/EmptySearchMessage";
 export { filterCreated, resetFilter, reducer as filterReducer } from "./model";

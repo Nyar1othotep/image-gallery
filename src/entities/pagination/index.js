@@ -1,4 +1,4 @@
-export * from "./ui/page-pagination/page-pagination";
+export * from "./ui/PagePagination/PagePagination";
 export {
   setPage,
   setPerPage,

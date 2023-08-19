@@ -1,1 +1,1 @@
-export * from "./ui/reload-page/reload-page";
+export * from "./ui/ReloadPage/ReloadPage";

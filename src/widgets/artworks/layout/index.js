@@ -1,1 +1,1 @@
-export * from "./ui/artworks-layout/artworks-layout";
+export * from "./ui/ArtworksLayout/ArtworksLayout";

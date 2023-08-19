@@ -1,1 +1,1 @@
-export * from "./ui/artworks-filter/artworks-filter";
+export * from "./ui/ArtworksFilter/ArtworksFilter";
