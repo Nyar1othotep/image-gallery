@@ -3,7 +3,6 @@ import { useMemo, useState } from "react";
 import cn from "classnames";
 
 import { setImageContent, useImageHandler } from "../../lib";
-import { ErrorImage } from "../ErrorImage/ErrorImage";
 import styles from "./Image.module.scss";
 
 export const Image = ({
@@ -29,8 +28,6 @@ export const Image = ({
     return setImageContent(process, spinner, styles.spinner);
     // eslint-disable-next-line
   }, [process]);
-
-  if (!image.url) return <ErrorImage />;
 
   return (
     <>

@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import { useBreakpoint } from "../../lib";
 import { Image } from "../Image/Image";
-import { ErrorImage } from "../ErrorImage/ErrorImage";
 
 export const LazyLoadImage = ({
   image = { url: "", width: 0, height: 0 },
@@ -16,8 +15,6 @@ export const LazyLoadImage = ({
   const onImageLoad = () => {
     setLoaded((loaded) => true);
   };
-
-  if (!image.url || !preview.url) return <ErrorImage />;
 
   return (
     <>

@@ -51,7 +51,7 @@ export const FilterWrapper = ({
   };
 
   return (
-    <div className={styles.root}>
+    <li className={styles.root}>
       <div className={styles.wrapper}>
         <Input
           className="xs-text collapse-text"
@@ -73,7 +73,7 @@ export const FilterWrapper = ({
         )}
       </div>
       {actionSlot && <div className={styles.slot}>{actionSlot}</div>}
-    </div>
+    </li>
   );
 };
 

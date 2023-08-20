@@ -22,8 +22,22 @@
 1. Download project from repository.
 2. Copy `.env.example` to `.env`
 3. Open terminal in code editor.
-4.
+4. Enter the following code:
 ```
 npm install
 npm start
 ```
+
+or use MockServer. In the **"src/app/index.js"**, uncomment the following lines:
+```
+// import { createMockServer } from "shared/lib";
+
+...
+
+// if (process.env.NODE_ENV === "development") {
+//   createMockServer();
+// }
+```
+
+## Contacts
+**Email**: [nyarlothotephoro@gmail.com](mailto:nyarlothotephoro@gmail.com)

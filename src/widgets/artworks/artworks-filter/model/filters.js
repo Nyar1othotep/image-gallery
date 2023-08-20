@@ -1,3 +1,11 @@
+/**
+ * @remark
+ *
+ * Static markup is moved to a separate file.
+ *
+ * "BEST PRACTISE": "Avoid using static markup, as maintaining static markup can be challenging".
+ */
+
 export const searchBy = [
   {
     identifier: "title",
