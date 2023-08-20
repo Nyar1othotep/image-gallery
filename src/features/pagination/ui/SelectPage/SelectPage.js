@@ -1,13 +1,10 @@
 import PropTypes from "prop-types";
 import { useCallback } from "react";
-
-// Redux & Store
 import { useDispatch, useSelector } from "react-redux";
 
 // Entities
 import { PagePagination } from "entities/pagination";
 
-// Model
 import { addSkipAndPage } from "../../model/paginationActions";
 
 export const SelectPage = ({ pageCount = 0 }) => {

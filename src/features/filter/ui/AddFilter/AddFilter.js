@@ -44,6 +44,13 @@ export const AddFilter = ({
   );
 };
 
+/**
+ * @remark
+ *
+ * ActionSlot has been extracted as a separate component.
+ * It's done to enhance readability and avoid excessive nesting.
+ */
+
 const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
   return (
     <ActionButton

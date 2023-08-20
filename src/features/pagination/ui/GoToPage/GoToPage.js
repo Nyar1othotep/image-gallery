@@ -48,7 +48,7 @@ export const GoToPage = ({ pageCount = 0 }) => {
       <FilterWrapper
         initialValue={minValue}
         forceValue={page}
-        placeholder="#"
+        placeholder="Enter page"
         inputType="number"
         onChange={handleChange}
         onKeyUp={handleGoToPage}
@@ -59,6 +59,13 @@ export const GoToPage = ({ pageCount = 0 }) => {
     </div>
   );
 };
+
+/**
+ * @remark
+ *
+ * ActionSlot has been extracted as a separate component.
+ * It's done to enhance readability and avoid excessive nesting.
+ */
 
 const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
   return (
