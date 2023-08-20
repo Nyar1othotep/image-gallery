@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-// Features
-import { ReloadPage } from "features/error";
-
-// Entities
-import { ErrorMessage } from "entities/error";
+// Shared
+import { ErrorMessage } from "shared/ui";
 
 import styles from "./ArtworkDetails.module.scss";
 
@@ -20,8 +17,7 @@ export const ArtworkDetails = ({ artwork = {} }) => {
     accessionNumber = "",
   } = artwork;
 
-  if (Object.keys(artwork).length === 0)
-    return <ErrorMessage actionSlot={<ReloadPage />} />;
+  if (Object.keys(artwork).length === 0) return <ErrorMessage />;
 
   return (
     <section className={styles.root}>

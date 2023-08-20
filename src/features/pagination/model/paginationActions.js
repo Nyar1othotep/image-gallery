@@ -1,13 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // Entities
-import { filterCreated } from "entities/filter";
+import { createFilter } from "entities/filter";
 import { setPage } from "entities/pagination";
 
 export const addSkipAndPage = createAsyncThunk(
   "pagination/addSkipAndPage",
   async ({ skip, page }, { dispatch }) => {
-    dispatch(filterCreated({ case: "skip", skip }));
+    dispatch(createFilter({ case: "skip", skip }));
     dispatch(setPage(page));
   }
 );

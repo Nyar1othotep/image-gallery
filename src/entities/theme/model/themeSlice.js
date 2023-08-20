@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { themes } from "../config/themes";
+import { themes } from "./themes";
 
 const initialState = {
   theme: window.matchMedia(`(prefers-color-scheme: ${themes.light})`)

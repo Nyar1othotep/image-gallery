@@ -5,3 +5,4 @@ export {
   resetPage,
   reducer as pageReducer,
 } from "./model/pageSlice";
+export { usePageCount } from "./lib/usePageCount";

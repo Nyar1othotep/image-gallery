@@ -1,7 +1,7 @@
 export { FilterWrapper } from "./ui/FilterWrapper/FilterWrapper";
 export { SearchMessage } from "./ui/SearchMessage/SearchMessage";
 export {
-  filterCreated,
+  createFilter,
   resetFilter,
   reducer as filterReducer,
 } from "./model/filterSlice";

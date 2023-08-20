@@ -2,13 +2,12 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 
 // Entities
-import { ArtworkLink } from "entities/artwork";
+import { ArtworkLink, convertToArray } from "entities/artwork";
 
 // Shared
 import { ActionButton } from "shared/ui";
 import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
-import { convertToArray } from "../../lib/convertToArray";
 import styles from "./DownloadArtwork.module.scss";
 
 export const DownloadArtwork = ({ artwork = {} }) => {

@@ -8,7 +8,7 @@ const filterSlice = createSlice({
   name: "filter",
   initialState,
   reducers: {
-    filterCreated(state, action) {
+    createFilter(state, action) {
       switch (action.payload.case) {
         case "skip":
           state.filter.skip = action.payload.skip;
@@ -25,5 +25,5 @@ const filterSlice = createSlice({
   },
 });
 
-export const { filterCreated, resetFilter } = filterSlice.actions;
+export const { createFilter, resetFilter } = filterSlice.actions;
 export const reducer = filterSlice.reducer;
