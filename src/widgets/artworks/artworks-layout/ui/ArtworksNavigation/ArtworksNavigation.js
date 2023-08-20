@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { SelectPage, GoToPage } from "features/pagination";
 
 // Entities
-import { usePageCount } from "entities/artwork";
+import { usePageCount } from "entities/pagination";
 
 export const ArtworksNavigation = ({
   artworksTotal = 0,

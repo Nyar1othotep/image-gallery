@@ -1,13 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // Entities
-import { filterCreated, resetFilter } from "entities/filter";
+import { createFilter, resetFilter } from "entities/filter";
 import { resetPage } from "entities/pagination";
 
 export const addFilter = createAsyncThunk(
   "artworks-filter/addFilter",
   async (filter, { dispatch }) => {
-    dispatch(filterCreated({ case: "add", filter }));
+    dispatch(createFilter({ case: "add", filter }));
     dispatch(resetPage());
   }
 );
