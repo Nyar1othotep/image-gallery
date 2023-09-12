@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
+import { FiSearch } from "react-icons/fi";
 
 // Entities
 import { FilterWrapper } from "entities/filter";
@@ -10,7 +11,6 @@ import { ActionButton } from "shared/ui";
 
 import { addFilter } from "../../model/filterActions";
 import styles from "./AddFilter.module.scss";
-import { ReactComponent as IconSearch } from "./assets/search.svg";
 
 export const AddFilter = ({
   identifier = "",
@@ -56,7 +56,7 @@ const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
     <ActionButton
       onClick={onClick}
       onKeyUp={onKeyUp}
-      iconSlot={<IconSearch className={styles.svg} />}
+      iconSlot={<FiSearch className={styles.svg} strokeWidth={1} />}
       tabIndex={0}
       aria-label="Search by query"
     />

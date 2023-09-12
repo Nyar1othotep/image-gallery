@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { FiX } from "react-icons/fi";
 
 // Shared
 import { Input } from "shared/ui";
 
 import { useInput } from "../../lib/useInput";
 import styles from "./FilterWrapper.module.scss";
-import { ReactComponent as IconReset } from "./assets/icon-close.svg";
 
 export const FilterWrapper = ({
   initialValue = "",
@@ -63,7 +63,7 @@ export const FilterWrapper = ({
           onKeyUp={handleKeyUp}
         />
         {value && (
-          <IconReset
+          <FiX
             className={styles.reset}
             onClick={handelReset}
             onKeyUp={handleKeyUpReset}

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { FiArrowRight } from "react-icons/fi";
 
 // Entities
 import { FilterWrapper } from "entities/filter";
@@ -10,7 +11,6 @@ import { ActionButton } from "shared/ui";
 
 import { addSkipAndPage } from "../../model/paginationActions";
 import styles from "./GoToPage.module.scss";
-import { ReactComponent as IconGoToPage } from "./assets/arrow.svg";
 
 export const GoToPage = ({ pageCount = 0 }) => {
   const minValue = 1;
@@ -72,7 +72,7 @@ const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
     <ActionButton
       onClick={onClick}
       onKeyUp={onKeyUp}
-      iconSlot={<IconGoToPage className={styles.svg} />}
+      iconSlot={<FiArrowRight className={styles.svg} strokeWidth={1} />}
       tabIndex={0}
       aria-label="Go to page"
     />

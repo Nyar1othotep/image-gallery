@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 // Entities
 import { changeTheme, useTheme } from "entities/theme";
@@ -10,7 +11,6 @@ import { changeTheme, useTheme } from "entities/theme";
 import { ActionButton } from "shared/ui";
 
 import styles from "./ToggleTheme.module.scss";
-import { ReactComponent as IconTheme } from "./assets/icon-theme.svg";
 
 export const ToggleTheme = ({ className = "" }) => {
   const dispatch = useDispatch();
@@ -32,7 +32,13 @@ export const ToggleTheme = ({ className = "" }) => {
       className={cn(styles.root, className)}
       onClick={handleTheme}
       onKeyUp={handleKeyUp}
-      iconSlot={<IconTheme className={styles.svg} />}
+      iconSlot={
+        theme === "light" ? (
+          <FiMoon className={styles.svg} strokeWidth={1} />
+        ) : (
+          <FiSun className={styles.svg} strokeWidth={1} />
+        )
+      }
       tabIndex={0}
       aria-label="Switch between dark and light mode"
     />

@@ -1,12 +1,12 @@
 import cn from "classnames";
 import { useRef, useState } from "react";
+import { FiChevronRight } from "react-icons/fi";
 
 // Entities
 import { useFilter } from "entities/filter";
 
 // Shared
 import { ActionButton } from "shared/ui";
-import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
 
 import { searchBy, filterBy } from "../../model/filters";
 import { FilterInputsList } from "../FilterInputsList/FilterInputsList";
@@ -49,7 +49,7 @@ export const ArtworksFilter = () => {
         <ActionButton
           className={styles.action_title}
           contentSlot={<h3>Filter by</h3>}
-          iconSlot={<IconArrow className={styles.svg} />}
+          iconSlot={<FiChevronRight className={styles.svg} />}
           onClick={handleFilterBy}
           onKeyUp={handleKeyUp}
           tabIndex={0}

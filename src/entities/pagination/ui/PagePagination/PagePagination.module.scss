@@ -33,7 +33,7 @@ $box-shadow: var(--input--focus-box-shadow);
       }
     }
     svg {
-      fill: var(--gray);
+      stroke: var(--gray);
     }
   }
 
@@ -61,7 +61,7 @@ $box-shadow: var(--input--focus-box-shadow);
 }
 
 .svg {
-  fill: var(--main-color);
+  stroke: var(--main-color);
 
   &_prev {
     transform: rotate(-180deg);

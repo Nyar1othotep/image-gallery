@@ -3,13 +3,13 @@
     "short_name": "Image Gallery",
     "icons": [
         {
-            "src": "/image-gallery/android-chrome-192x192.png",
+            "src": "/image-gallery/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "/image-gallery/android-chrome-512x512.png",
+            "src": "/image-gallery/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
