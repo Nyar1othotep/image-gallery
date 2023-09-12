@@ -11,10 +11,9 @@ import { ActionButton } from "shared/ui";
 import styles from "./DownloadArtwork.module.scss";
 
 export const DownloadArtwork = ({ artwork = {} }) => {
-  const imagesArray = convertToArray(artwork.images);
+  const { images = {} } = artwork;
 
-  if (Object.keys(artwork).length === 0 && imagesArray.length === 0)
-    return null;
+  const imagesArray = convertToArray(images);
 
   return (
     <div className={cn(styles.root, "m-text")}>

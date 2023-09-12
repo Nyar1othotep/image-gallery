@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 
-// Shared
-import { ErrorMessage } from "shared/ui";
-
 import styles from "./ArtworkDetails.module.scss";
 
 export const ArtworkDetails = ({ artwork = {} }) => {
@@ -17,10 +14,8 @@ export const ArtworkDetails = ({ artwork = {} }) => {
     accessionNumber = "",
   } = artwork;
 
-  if (Object.keys(artwork).length === 0) return <ErrorMessage />;
-
   return (
-    <section className={styles.root}>
+    <section>
       <h1 className={styles.title}>Artwork details</h1>
       <ul className={cn(styles.list, "base-text")}>
         <li>

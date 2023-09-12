@@ -1,14 +1,15 @@
 import PropTypes from "prop-types";
 
 import { convertToMb } from "../../lib/convertToMb";
+import styles from "./ArtworkLink.module.scss";
 
 export const ArtworkLink = ({ artwork = {} }) => {
   const { key = "", filename = "", url = "", filesize = "" } = artwork;
 
   return (
     <li>
-      <a download={filename} href={url}>
-        {key} <span>({convertToMb(filesize)} Mb)</span>
+      <a className={styles.link} download={filename} href={url}>
+        {key} <span className={styles.size}>({convertToMb(filesize)} Mb)</span>
       </a>
     </li>
   );

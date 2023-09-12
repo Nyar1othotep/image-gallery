@@ -7,7 +7,7 @@ import { PagePagination } from "entities/pagination";
 
 import { addSkipAndPage } from "../../model/paginationActions";
 
-export const SelectPage = ({ pageCount = 0 }) => {
+export const SelectPage = ({ className = "", pageCount = 0 }) => {
   const dispatch = useDispatch();
   const { page, perPage } = useSelector((state) => state.page);
 
@@ -24,12 +24,17 @@ export const SelectPage = ({ pageCount = 0 }) => {
   );
 
   return (
-    <PagePagination
-      pageCount={pageCount}
-      forcePage={page - 1}
-      onPageChange={({ selected }) => handleSelect(selected)}
-    />
+    <div className={className}>
+      <PagePagination
+        pageCount={pageCount}
+        forcePage={page - 1}
+        onPageChange={({ selected }) => handleSelect(selected)}
+      />
+    </div>
   );
 };
 
-SelectPage.propTypes = { pageCount: PropTypes.number };
+SelectPage.propTypes = {
+  className: PropTypes.string,
+  pageCount: PropTypes.number,
+};

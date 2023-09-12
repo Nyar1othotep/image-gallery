@@ -22,7 +22,9 @@ export const ArtworksList = ({
   if (isError) return <ErrorMessage />;
 
   if (artworks.length === 0)
-    return <SearchMessage actionSlot={<ResetFilter />} />;
+    return (
+      <SearchMessage className={styles.message} actionSlot={<ResetFilter />} />
+    );
 
   return (
     <ul className={styles.root}>

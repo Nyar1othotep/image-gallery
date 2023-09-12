@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 
 // Shared
-import { LazyLoadImage, ErrorMessage } from "shared/ui";
+import { LazyLoadImage } from "shared/ui";
 
 import styles from "./ArtworkFull.module.scss";
 
@@ -14,8 +14,6 @@ export const ArtworkFull = ({ artwork = {}, actionSlot }) => {
     creation_date = "",
     wallDescription = "",
   } = artwork;
-
-  if (Object.keys(artwork).length === 0) return <ErrorMessage />;
 
   return (
     <section className={styles.root}>

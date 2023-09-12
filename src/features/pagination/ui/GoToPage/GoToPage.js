@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FiArrowRight } from "react-icons/fi";
+import cn from "classnames";
 
 // Entities
 import { FilterWrapper } from "entities/filter";
@@ -12,7 +13,7 @@ import { ActionButton } from "shared/ui";
 import { addSkipAndPage } from "../../model/paginationActions";
 import styles from "./GoToPage.module.scss";
 
-export const GoToPage = ({ pageCount = 0 }) => {
+export const GoToPage = ({ className = "", pageCount = 0 }) => {
   const minValue = 1;
   const dispatch = useDispatch();
   const { page, perPage } = useSelector((state) => state.page);
@@ -44,7 +45,7 @@ export const GoToPage = ({ pageCount = 0 }) => {
   };
 
   return (
-    <div className={styles.root}>
+    <div className={cn(styles.root, className)}>
       <FilterWrapper
         initialValue={minValue}
         forceValue={page}
@@ -64,7 +65,7 @@ export const GoToPage = ({ pageCount = 0 }) => {
  * @remark
  *
  * ActionSlot has been extracted as a separate component.
- * It's done to enhance readability and avoid excessive nesting.
+ * It's done to improve readability and avoid excessive nesting.
  */
 
 const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
@@ -79,4 +80,7 @@ const ActionSlot = ({ onClick = () => {}, onKeyUp = () => {} }) => {
   );
 };
 
-GoToPage.propTypes = { pageCount: PropTypes.number };
+GoToPage.propTypes = {
+  className: PropTypes.string,
+  pageCount: PropTypes.number,
+};

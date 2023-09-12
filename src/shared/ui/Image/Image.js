@@ -12,16 +12,16 @@ export const Image = ({
   spinner = false,
   onLoad = () => {},
 }) => {
-  const [process, setProcess] = useState(image.url ? "loading" : "error");
+  const [process, setProcess] = useState(image.url ? "loading" : false);
   const [imageRef] = useImageHandler(image.url);
 
   const onImageLoad = () => {
-    setProcess((process) => "loaded");
+    setProcess((process) => true);
     onLoad();
   };
 
   const onImageError = () => {
-    setProcess((process) => "error");
+    setProcess((process) => false);
   };
 
   const imageState = useMemo(() => {
@@ -32,15 +32,18 @@ export const Image = ({
   return (
     <>
       {imageState}
-      <img
-        ref={imageRef}
-        className={cn({ [styles.root]: process !== "loaded" }, className)}
-        alt={alt}
-        width={image.width + "px"}
-        height={image.height + "px"}
-        onLoad={onImageLoad}
-        onError={onImageError}
-      />
+
+      {process && (
+        <img
+          ref={imageRef}
+          className={cn({ [styles.root]: process !== true }, className)}
+          alt={alt}
+          width={image.width + "px"}
+          height={image.height + "px"}
+          onLoad={onImageLoad}
+          onError={onImageError}
+        />
+      )}
     </>
   );
 };

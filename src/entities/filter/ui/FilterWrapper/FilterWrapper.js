@@ -20,7 +20,7 @@ export const FilterWrapper = ({
   actionSlot,
 }) => {
   const filter = useSelector((state) => state.filter.filter);
-  const [value, setValue, handleChange, handleBlur, handelReset] =
+  const [value, setValue, handleChange, handleBlur, handelClear] =
     useInput(initialValue);
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export const FilterWrapper = ({
 
   const handleKeyUpReset = (e) => {
     if (e.key === "Enter" || e.key === " ") {
-      handelReset();
+      handelClear();
     }
   };
 
@@ -63,17 +63,36 @@ export const FilterWrapper = ({
           onKeyUp={handleKeyUp}
         />
         {value && (
-          <FiX
-            className={styles.reset}
-            onClick={handelReset}
-            onKeyUp={handleKeyUpReset}
-            tabIndex={0}
-            aria-label="Clear the query"
+          <ClearQuery
+            handelClear={handelClear}
+            handleKeyUpReset={handleKeyUpReset}
           />
         )}
       </div>
       {actionSlot && <div className={styles.slot}>{actionSlot}</div>}
     </li>
+  );
+};
+
+/**
+ * @remark
+ *
+ * ClearQuery has been extracted as a separate component.
+ * It's done to improve readability.
+ */
+
+const ClearQuery = ({
+  handelClear = () => {},
+  handleKeyUpReset = () => {},
+}) => {
+  return (
+    <FiX
+      className={styles.clear}
+      onClick={handelClear}
+      onKeyUp={handleKeyUpReset}
+      tabIndex={0}
+      aria-label="Clear the query"
+    />
   );
 };
 

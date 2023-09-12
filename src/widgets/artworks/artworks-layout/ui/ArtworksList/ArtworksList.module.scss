@@ -1,7 +1,8 @@
+@import "shared/styles/variables";
 @import "shared/styles/breakpoints";
 
 .root {
-  padding: 0 0 70px 0;
+  padding: 0 0 $xl-p 0;
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(4,minmax(0,1fr));
@@ -19,4 +20,8 @@
   @media (max-width: $xs-viewport) {
     grid-template-columns: repeat(1,minmax(0,1fr));
   }
+}
+
+.message {
+  align-items: center;
 }

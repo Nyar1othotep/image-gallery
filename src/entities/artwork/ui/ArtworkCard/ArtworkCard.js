@@ -9,7 +9,6 @@ import { useImageObserver } from "../../lib/useImageObserver";
 import styles from "./ArtworkCard.module.scss";
 
 export const ArtworkCard = ({
-  className = "",
   id = 0,
   title = "",
   creation_date = "",
@@ -24,7 +23,7 @@ export const ArtworkCard = ({
   });
 
   return (
-    <li ref={containerRef} className={cn(styles.root, className)}>
+    <li ref={containerRef}>
       <Link className={styles.item} to={`artwork/${id}`}>
         <div className={cn(styles.img, "_ibg")}>
           {onView && <Image image={image} alt={title} spinner={true} />}

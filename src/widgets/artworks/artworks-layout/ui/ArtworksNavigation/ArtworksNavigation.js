@@ -7,6 +7,8 @@ import { SelectPage, GoToPage } from "features/pagination";
 // Entities
 import { usePageCount } from "entities/pagination";
 
+import styles from "./ArtworksNavigation.module.scss";
+
 export const ArtworksNavigation = ({
   artworksTotal = 0,
   isFetching = false,
@@ -19,8 +21,8 @@ export const ArtworksNavigation = ({
 
   return (
     <>
-      <SelectPage pageCount={pageCount} />
-      <GoToPage pageCount={pageCount} />
+      <SelectPage className={styles.select} pageCount={pageCount} />
+      <GoToPage className={styles.goto} pageCount={pageCount} />
     </>
   );
 };

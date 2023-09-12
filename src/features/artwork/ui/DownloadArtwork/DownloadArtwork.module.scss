@@ -38,21 +38,4 @@
   &>*:not(:last-child) {
     margin: 0 0 5px 0;
   }
-
-  a {
-    display: inline-block;
-    width: 100%;
-    padding: 5px;
-    text-align: left;
-    border-radius: $xl-border-radius;
-    color: var(--main-color);
-
-    &:hover {
-      background: var(--opacity-gray);
-    }
-  }
-
-  span {
-    font-size: 13px;
-  }
 }
