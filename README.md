@@ -21,6 +21,7 @@
 
 1. Download project from repository.
 2. Copy `.env.example` to `.env`, or use MockServer. In **"src/app/index.js"** uncomment the following lines:
+    
     ```
     // import { createMockServer } from "shared/lib";
     
@@ -32,7 +33,8 @@
     ```
 3. Open terminal in code editor.
 4. Enter the following code:
-    ```
+
+   ```
     npm install
     npm start
     ```
