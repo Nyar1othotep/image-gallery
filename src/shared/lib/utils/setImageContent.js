@@ -8,9 +8,9 @@ export const setImageContent = (
   switch (process) {
     case "loading":
       return spinner && <Spinner className={className} />;
-    case "loaded":
+    case true:
       return null;
-    case "error":
+    case false:
       return <ErrorImage />;
     default:
       throw new Error("Unexpected process state");

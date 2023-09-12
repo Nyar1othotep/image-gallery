@@ -9,9 +9,9 @@ export const useInput = (initValue) => {
   const handleBlur = (e) => {
     setValue((value) => e.target.value.trim());
   };
-  const handelReset = () => {
+  const handelClear = () => {
     setValue((value) => "");
   };
 
-  return [value, setValue, handleChange, handleBlur, handelReset];
+  return [value, setValue, handleChange, handleBlur, handelClear];
 };

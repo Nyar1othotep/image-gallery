@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
 import cn from "classnames";
 import ReactPaginate from "react-paginate";
-
-// Shared
-import { ReactComponent as IconArrow } from "shared/assets/icon_arrow.svg";
+import { FiChevronRight } from "react-icons/fi";
 
 import styles from "./PagePagination.module.scss";
 
@@ -24,15 +22,10 @@ export const PagePagination = ({
         hrefAllControls={true}
         // Previous
         previousLabel={
-          <IconArrow
-            data-testid="page-navigation-svg"
-            className={cn(styles.svg, styles.svg_prev)}
-          />
+          <FiChevronRight className={cn(styles.svg, styles.svg_prev)} />
         }
         // Next
-        nextLabel={
-          <IconArrow data-testid="page-navigation-svg" className={styles.svg} />
-        }
+        nextLabel={<FiChevronRight className={styles.svg} />}
         // Break
         breakLabel="..."
         // Page

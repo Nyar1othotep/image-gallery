@@ -5,7 +5,6 @@ import { useGetArtworksQuery } from "entities/artwork";
 
 import { ArtworksList } from "../ArtworksList/ArtworksList";
 import { ArtworksNavigation } from "../ArtworksNavigation/ArtworksNavigation";
-import styles from "./ArtworksLayout.module.scss";
 
 export const ArtworksLayout = () => {
   const filter = useSelector((state) => state.filter.filter);
@@ -20,7 +19,7 @@ export const ArtworksLayout = () => {
   const { data: artworks = [], total: artworksTotal = 0 } = data;
 
   return (
-    <section className={styles.root}>
+    <section>
       <ArtworksList
         artworks={artworks}
         isFetching={isFetching}

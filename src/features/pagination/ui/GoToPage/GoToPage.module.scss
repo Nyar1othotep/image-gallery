@@ -1,8 +1,6 @@
 @import "shared/styles/variables";
 
 .root {
-  margin: 0 auto;
-  padding: 0 0 60px 0;
   max-width: 184px;
 
   input {
@@ -13,5 +11,5 @@
 .svg {
   width: 24px;
   height: 24px;
-  fill: var(--main-color);
+  stroke: var(--main-color);
 }
