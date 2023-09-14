@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 // Shared
+import { useBreakpoint } from "shared/lib";
 import { Image } from "shared/ui";
 
 import { useImageObserver } from "../../lib/useImageObserver";
@@ -15,9 +16,10 @@ export const ArtworkCard = ({
   image = "",
   creators = "",
 }) => {
+  const [isSmallView] = useBreakpoint(767);
   const [containerRef, onView] = useImageObserver({
     root: null,
-    rootMargin: "200px",
+    rootMargin: isSmallView ? "800px" : "400px",
     threshold: 0,
     triggerOnce: true,
   });
