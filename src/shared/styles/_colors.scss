@@ -1,3 +1,15 @@
+:root {
+  --background: #ffffff;
+  --secondary-background: #ffffff;
+  --main-color: #000000;
+  --gray: #838383;
+  --opacity-gray: rgba(155, 155, 155, 0.2);
+
+  // Input
+  --input-focus-border: #80bdff;
+  --input--focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
 :root[data-theme="light"] {
   --background: #ffffff;
   --secondary-background: #ffffff;
@@ -16,9 +28,4 @@
   // Input
   --input-focus-border: #acacac;
   --input--focus-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.349);
-}
-
-:root {
-  --gray: #838383;
-  --opacity-gray: rgba(155, 155, 155, 0.2);
 }
