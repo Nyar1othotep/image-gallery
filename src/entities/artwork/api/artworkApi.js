@@ -4,10 +4,9 @@ import { transformArtwork, transformArtworks } from "../lib/transformArtworks";
 export const artworkApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getArtworks: build.query({
-      query: (config) => {
-        const { filter = "", perPage = 0 } = config;
+      query: (filter) => {
         return {
-          url: `/artworks?limit=${perPage}&has_image=1`,
+          url: `/artworks?has_image=1`,
           method: "GET",
           params: filter,
         };

@@ -1,12 +1,12 @@
 import cn from "classnames";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 // Shared
 import { useBreakpoint } from "shared/lib";
 import { Image } from "shared/ui";
 
-import { useImageObserver } from "../../lib/useImageObserver";
 import styles from "./ArtworkCard.module.scss";
 
 export const ArtworkCard = ({
@@ -17,18 +17,17 @@ export const ArtworkCard = ({
   creators = "",
 }) => {
   const [isSmallView] = useBreakpoint(767);
-  const [containerRef, onView] = useImageObserver({
-    root: null,
+  const { ref, inView } = useInView({
     rootMargin: isSmallView ? "800px" : "400px",
     threshold: 0,
     triggerOnce: true,
   });
 
   return (
-    <li ref={containerRef}>
+    <li ref={ref}>
       <Link className={styles.item} to={`artwork/${id}`}>
         <div className={cn(styles.img, "_ibg")}>
-          {onView && <Image image={image} alt={title} spinner={true} />}
+          {inView && <Image image={image} alt={title} spinner={true} />}
         </div>
         <div className={styles.info}>
           <h4 className={styles.title}>{title}</h4>

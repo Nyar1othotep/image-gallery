@@ -4,9 +4,10 @@ import cn from "classnames";
 // Shared
 import { LazyLoadImage } from "shared/ui";
 
+import { ArtworkDropdown } from "../ArtworkDropdown/ArtworkDropdown";
 import styles from "./ArtworkFull.module.scss";
 
-export const ArtworkFull = ({ artwork = {}, actionSlot }) => {
+export const ArtworkFull = ({ artwork = {} }) => {
   const {
     images = {},
     title = "",
@@ -25,7 +26,7 @@ export const ArtworkFull = ({ artwork = {}, actionSlot }) => {
             alt={title}
           />
         </div>
-        {actionSlot && actionSlot}
+        <ArtworkDropdown artwork={artwork} />
       </div>
       <div className={cn(styles.info, "base-text")}>
         <h1>{title}</h1>
@@ -37,7 +38,4 @@ export const ArtworkFull = ({ artwork = {}, actionSlot }) => {
   );
 };
 
-ArtworkFull.propTypes = {
-  artwork: PropTypes.object.isRequired,
-  actionSlot: PropTypes.any,
-};
+ArtworkFull.propTypes = { artwork: PropTypes.object.isRequired };

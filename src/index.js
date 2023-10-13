@@ -7,7 +7,7 @@ import { store, persistedStore } from "app/store";
 // Providers
 import { Provider as ReduxProvider } from "react-redux";
 import { HashRouter as RouterProvider } from "react-router-dom";
-import { ThemeProvider } from "./entities/theme";
+import { ThemeProvider } from "./features/theme";
 import { PersistGate as PersistProvider } from "redux-persist/integration/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

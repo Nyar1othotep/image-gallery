@@ -1,0 +1,49 @@
+@import "shared/styles/variables";
+@import "shared/styles/breakpoints";
+
+.root {
+  padding-bottom: $xl-p;
+
+  & > *:not(:last-child) {
+    margin-bottom: $xl-m;
+  }
+
+  @media (max-width: $s-viewport) {
+    padding-bottom: $s-p;
+  }
+}
+
+.filter_by,
+.filter_by__active {
+  .action_title {
+    width: max-content;
+
+    svg {
+      transform: rotate(90deg);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+.filter_by .action_title svg {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.filter_by__active .action_title svg {
+  transform: rotate(-90deg) !important;
+}
+
+.search_by {
+  grid-template-columns: auto;
+}
+
+.wrapper {
+  & > *:not(:last-child) {
+    margin-bottom: $l-m;
+  }
+}
+
+.svg {
+  stroke: var(--main-color);
+}

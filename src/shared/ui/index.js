@@ -5,3 +5,4 @@ export { Image } from "./Image/Image";
 export { ErrorImage } from "./ErrorImage/ErrorImage";
 export { LazyLoadImage } from "./LazyLoadImage/LazyLoadImage";
 export { ErrorMessage } from "./ErrorMessage/ErrorMessage";
+export { SearchMessage } from "./SearchMessage/SearchMessage";

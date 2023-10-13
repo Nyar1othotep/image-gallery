@@ -1,8 +1,10 @@
+import { useSelector } from "react-redux";
+
 // Entities
-import { useTheme, themes } from "entities/theme";
+import { themes } from "features/theme";
 
 export const Logo = () => {
-  const theme = useTheme();
+  const theme = useSelector((state) => state.theme.theme);
 
   return (
     <img
