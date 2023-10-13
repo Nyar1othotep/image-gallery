@@ -5,7 +5,8 @@ import { useDispatch } from "react-redux";
 import { FiSun, FiMoon } from "react-icons/fi";
 
 // Entities
-import { changeTheme, useTheme } from "entities/theme";
+import { changeTheme } from "../../model/themeSlice";
+import { useTheme } from "../../model/themeSelectors";
 
 // Shared
 import { ActionButton } from "shared/ui";

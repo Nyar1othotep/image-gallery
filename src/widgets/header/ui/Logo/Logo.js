@@ -1,5 +1,5 @@
 // Entities
-import { useTheme, themes } from "entities/theme";
+import { useTheme, themes } from "features/theme";
 
 export const Logo = () => {
   const theme = useTheme();

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { themes } from "./themes";
 
 const initialState = {
-  theme: window.matchMedia(`(prefers-color-scheme: ${themes.light})`)
+  theme: window.matchMedia(`(prefers-color-scheme: ${themes.light})`).matches
     ? themes.light
     : themes.dark,
 };
