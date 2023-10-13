@@ -1,9 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-// Features
-import { DownloadArtwork } from "features/artwork";
-
 // Entities
 import {
   useGetArtworkQuery,
@@ -36,10 +33,7 @@ export const ArtworkDetailsPage = () => {
         />
       </Helmet>
 
-      <ArtworkFull
-        artwork={artwork}
-        actionSlot={<DownloadArtwork artwork={artwork} />}
-      />
+      <ArtworkFull artwork={artwork} />
 
       <ArtworkDetails artwork={artwork} />
     </main>

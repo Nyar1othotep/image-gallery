@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-
-import { useTheme } from "../model/themeSelectors";
+import { useSelector } from "react-redux";
 
 export const ThemeProvider = ({ children }) => {
-  const theme = useTheme();
+  const theme = useSelector((state) => state.theme.theme);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;

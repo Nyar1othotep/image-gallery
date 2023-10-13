@@ -1,0 +1,41 @@
+@import "shared/styles/variables";
+
+.root {
+  position: relative;
+  display: inline-block;
+  color: var(--main-color);
+  cursor: pointer;
+
+  &:hover .dropdown {
+    display: block;
+  }
+  &:hover .svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.svg {
+  stroke: var(--main-color);
+  transform: rotate(90deg);
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  display: none;
+  border-radius: $xl-border-radius;
+  border: 1px solid var(--main-color);
+  background-color: var(--secondary-background);
+  min-width: 160px;
+  z-index: 1;
+
+  & > *:not(:last-child) {
+    margin: 0 0 5px 0;
+  }
+}

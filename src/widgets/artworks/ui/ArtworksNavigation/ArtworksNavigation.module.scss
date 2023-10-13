@@ -1,0 +1,76 @@
+@import "shared/styles/variables";
+
+$border: 1px solid var(--input-focus-border);
+$box-shadow: var(--input--focus-box-shadow);
+
+.root {
+  padding: 0 0 $s-p 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .active a {
+    border: $border;
+    box-shadow: $box-shadow;
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  .disabled {
+    a {
+      border: 1px solid var(--gray);
+
+      &:focus,
+      &:hover {
+        border: 1px solid var(--gray);
+        box-shadow: none;
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+    svg {
+      stroke: var(--gray);
+    }
+  }
+
+  li a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-background);
+    border: 1px solid var(--main-color);
+    border-radius: 7px;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      border: $border;
+      box-shadow: $box-shadow;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.svg {
+  stroke: var(--main-color);
+
+  &_prev {
+    transform: rotate(-180deg);
+  }
+}

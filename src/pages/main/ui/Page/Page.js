@@ -1,11 +1,13 @@
 // Widgets
-import { ArtworksFilter } from "widgets/artworks/artworks-filter";
-import { ArtworksLayout } from "widgets/artworks/artworks-layout";
+import { ArtworksLayout } from "widgets/artworks";
+
+// Features
+import { FiltersLayout } from "features/filters";
 
 export const MainPage = () => {
   return (
     <main>
-      <ArtworksFilter />
+      <FiltersLayout />
       <ArtworksLayout />
     </main>
   );
